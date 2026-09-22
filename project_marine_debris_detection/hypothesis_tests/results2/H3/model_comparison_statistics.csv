@@ -1,0 +1,5 @@
+﻿test,comparison,n_paired_images,statistic,p_value,effect_size,effect_size_type,holm_adjusted_p,significant,alpha
+Friedman,YOLOv8n vs RT-DETR-L vs RTMDet-Tiny,2462,14.977986403366765,0.0005592056844989265,0.0030418331444692862,Kendall's W,,True,
+Pairwise Wilcoxon,YOLOv8n vs RT-DETR-L,2462,427606.5,0.004747757102003335,0.07889641478553265,paired Cohen's dz,0.014243271306010004,True,0.05
+Pairwise Wilcoxon,YOLOv8n vs RTMDet-Tiny,2462,496298.5,0.98045029824224,0.02347338985991004,paired Cohen's dz,0.98045029824224,False,0.05
+Pairwise Wilcoxon,RT-DETR-L vs RTMDet-Tiny,2462,600435.0,0.007939367013854145,-0.05256117767817976,paired Cohen's dz,0.01587873402770829,True,0.05

@@ -1,0 +1,29 @@
+{
+    "status": "PASS",
+    "condition_name": "uav_coastal_domain_shift",
+    "condition_type": "real_domain_shift",
+    "models": [
+        "YOLOv8n",
+        "RT-DETR-L",
+        "RTMDet-Tiny"
+    ],
+    "n_models": 3,
+    "n_source_images": 2462,
+    "n_target_images": 2462,
+    "expected_source_rows": 7386,
+    "actual_source_rows": 7386,
+    "expected_target_rows": 7386,
+    "actual_target_rows": 7386,
+    "source_success_rows": 7386,
+    "source_failed_rows": 0,
+    "target_success_rows": 7386,
+    "target_failed_rows": 0,
+    "common_image_ids": 2462,
+    "paired_rows": 7386,
+    "nan_source_f1": 0,
+    "nan_target_f1": 0,
+    "nan_degradation": 0,
+    "duplicate_source_image_model": 0,
+    "duplicate_target_image_model": 0,
+    "complete": true
+}

@@ -1,0 +1,35 @@
+{
+    "primary_metric": "per_image_F1",
+    "n_matched_images": 2462,
+    "number_of_models": 3,
+    "friedman_statistic": 419.4825957670088,
+    "friedman_p_value": 8.137887878405748e-92,
+    "kendalls_W": 0.08519142887226011,
+    "alpha": 0.05,
+    "pairwise_comparisons": [
+        {
+            "comparison": "YOLOv8 vs RT-DETR",
+            "wilcoxon_statistic": 345271.0,
+            "raw_p": 1.64488055478245e-27,
+            "rank_biserial_r": 0.3297856026709889,
+            "holm_p": 3.2897611095649e-27,
+            "significant_alpha_0.05": true
+        },
+        {
+            "comparison": "YOLOv8 vs RTMDet",
+            "wilcoxon_statistic": 324069.5,
+            "raw_p": 1.695562339094238e-39,
+            "rank_biserial_r": 0.39560696767936737,
+            "holm_p": 5.086687017282714e-39,
+            "significant_alpha_0.05": true
+        },
+        {
+            "comparison": "RT-DETR vs RTMDet",
+            "wilcoxon_statistic": 288005.5,
+            "raw_p": 5.316419451849312e-05,
+            "rank_biserial_r": 0.13717850776674306,
+            "holm_p": 5.316419451849312e-05,
+            "significant_alpha_0.05": true
+        }
+    ]
+}

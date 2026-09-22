@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "expected": {
+    "clean_images": 2462,
+    "models": 3,
+    "corruptions": 6,
+    "clean_rows": 7386,
+    "corrupted_rows": 44316,
+    "degradation_rows": 44316
+  },
+  "actual": {
+    "clean_rows": 7386,
+    "corrupted_rows": 44316,
+    "degradation_rows": 44316
+  },
+  "corruption_image_counts": {
+    "brightness": 2462,
+    "contrast": 2462,
+    "gaussian_noise": 2462,
+    "gaussian_blur": 2462,
+    "motion_blur": 2462,
+    "jpeg_compression": 2462
+  },
+  "quality": {
+    "missing_label_count": 0,
+    "nan_f1_count": 0,
+    "nan_model_count": 0,
+    "nan_condition_count": 0,
+    "missing_degradation_pairs": 0,
+    "missing_degradation_examples": []
+  },
+  "complete": true
+}

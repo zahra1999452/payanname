@@ -1,0 +1,24 @@
+__pycache__/
+*.pyc
+
+results/**/*.pt
+results/**/*.pth
+
+data/corruption/*/images/
+data/domain_shift/images/
+data/adaptation/images/
+
+*.log
+
+# H3 target domain dataset — keep folder structure, drop the actual images/labels
+# (real test-split images + YOLO label .txt files; manifest.csv stays tracked)
+results2/H3/target_dataset/images/test/*
+results2/H3/target_dataset/labels/test/*
+!results2/H3/target_dataset/images/test/.gitkeep
+!results2/H3/target_dataset/labels/test/.gitkeep
+
+# GitHub hard-blocks any single file over 100 MB (and warns above 50 MB).
+# ALL_METRICS_INVENTORY.csv is a ~296 MB flattened per-image metrics dump
+# aggregated from results2/{H1,H2,H3,H4}/**/per_image_metrics.csv — keep it
+# out of git; METRIC_SUMMARY_ALL_HYPOTHESES.csv (the small rollup) stays tracked.
+results2/MASTER_PLOTS/ALL_METRICS_INVENTORY.csv

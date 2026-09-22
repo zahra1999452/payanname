@@ -1,0 +1,76 @@
+{
+    "previous_output": "E:\\rename\\yolo_work_out\\resrcher\\marine_debris_detection\\hypothesis_tests\\results\\H1",
+    "new_output": "E:\\rename\\yolo_work_out\\resrcher\\marine_debris_detection\\hypothesis_tests\\results2\\H1",
+    "new_statistics": {
+        "analysis": "H1 Controlled Baseline Comparison",
+        "primary_metric": "per_image_F1",
+        "matching_iou_threshold": 0.5,
+        "n_matched_images": 2462,
+        "number_of_models": 3,
+        "friedman_statistic": 383.76041848299946,
+        "friedman_p_value": 4.650331791200483e-84,
+        "kendalls_W": 0.07793672186900882,
+        "alpha": 0.05,
+        "pairwise_comparisons": [
+            {
+                "comparison": "YOLOv8 vs RT-DETR",
+                "wilcoxon_statistic": 358569.5,
+                "raw_p": 1.505139901139121e-24,
+                "rank_biserial_r": 0.30975368661576325,
+                "holm_p": 3.010279802278242e-24,
+                "significant_alpha_0.05": true
+            },
+            {
+                "comparison": "YOLOv8 vs RTMDet",
+                "wilcoxon_statistic": 338712.0,
+                "raw_p": 1.612297499661255e-35,
+                "rank_biserial_r": 0.3734430277889538,
+                "holm_p": 4.836892498983764e-35,
+                "significant_alpha_0.05": true
+            },
+            {
+                "comparison": "RT-DETR vs RTMDet",
+                "wilcoxon_statistic": 288005.5,
+                "raw_p": 5.316419451849312e-05,
+                "rank_biserial_r": 0.13717850776674306,
+                "holm_p": 5.316419451849312e-05,
+                "significant_alpha_0.05": true
+            }
+        ]
+    },
+    "previous_statistics": {
+        "primary_metric": "per_image_F1",
+        "n_matched_images": 2462,
+        "number_of_models": 3,
+        "friedman_statistic": 383.76041848299946,
+        "friedman_p_value": 4.650331791200483e-84,
+        "kendalls_W": 0.07793672186900882,
+        "alpha": 0.05,
+        "pairwise_comparisons": [
+            {
+                "comparison": "YOLOv8 vs RT-DETR",
+                "wilcoxon_statistic": 358569.5,
+                "raw_p": 1.505139901139121e-24,
+                "rank_biserial_r": 0.30975368661576325,
+                "holm_p": 3.010279802278242e-24,
+                "significant_alpha_0.05": true
+            },
+            {
+                "comparison": "YOLOv8 vs RTMDet",
+                "wilcoxon_statistic": 338712.0,
+                "raw_p": 1.612297499661255e-35,
+                "rank_biserial_r": 0.3734430277889538,
+                "holm_p": 4.836892498983764e-35,
+                "significant_alpha_0.05": true
+            },
+            {
+                "comparison": "RT-DETR vs RTMDet",
+                "wilcoxon_statistic": 288005.5,
+                "raw_p": 5.316419451849312e-05,
+                "rank_biserial_r": 0.13717850776674306,
+                "holm_p": 5.316419451849312e-05,
+                "significant_alpha_0.05": true
+            }
+        ]
+    }
+}

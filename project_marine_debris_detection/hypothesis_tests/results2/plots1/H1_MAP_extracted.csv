@@ -1,0 +1,13 @@
+﻿model,value,metric,source_file,hypothesis
+YOLOv8n,0.5963476740171276,mAP@0.50,H1_descriptive_statistics.csv,H1
+RT-DETR-L,0.6734456541195999,mAP@0.50,H1_descriptive_statistics.csv,H1
+RTMDet-Tiny,0.6220636523936905,mAP@0.50,H1_descriptive_statistics.csv,H1
+YOLOv8n,0.4128851882991949,mAP@0.50:0.95,H1_descriptive_statistics.csv,H1
+RT-DETR-L,0.4665510215204781,mAP@0.50:0.95,H1_descriptive_statistics.csv,H1
+RTMDet-Tiny,0.411559596108822,mAP@0.50:0.95,H1_descriptive_statistics.csv,H1
+YOLOv8n,0.5963476740171276,mAP@0.50,per_image_metrics.csv,H1
+RT-DETR-L,0.6734456541195999,mAP@0.50,per_image_metrics.csv,H1
+RTMDet-Tiny,0.6220636523936905,mAP@0.50,per_image_metrics.csv,H1
+YOLOv8n,0.4128851882991949,mAP@0.50:0.95,per_image_metrics.csv,H1
+RT-DETR-L,0.4665510215204781,mAP@0.50:0.95,per_image_metrics.csv,H1
+RTMDet-Tiny,0.411559596108822,mAP@0.50:0.95,per_image_metrics.csv,H1

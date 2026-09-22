@@ -1,0 +1,65 @@
+{
+  "clean_image_count": 2462,
+  "results": [
+    {
+      "condition": "brightness",
+      "clean_count": 2462,
+      "corruption_count": 2462,
+      "missing_count": 0,
+      "extra_count": 0,
+      "missing_examples": [],
+      "extra_examples": [],
+      "status": "PASS"
+    },
+    {
+      "condition": "contrast",
+      "clean_count": 2462,
+      "corruption_count": 2462,
+      "missing_count": 0,
+      "extra_count": 0,
+      "missing_examples": [],
+      "extra_examples": [],
+      "status": "PASS"
+    },
+    {
+      "condition": "gaussian_noise",
+      "clean_count": 2462,
+      "corruption_count": 2462,
+      "missing_count": 0,
+      "extra_count": 0,
+      "missing_examples": [],
+      "extra_examples": [],
+      "status": "PASS"
+    },
+    {
+      "condition": "gaussian_blur",
+      "clean_count": 2462,
+      "corruption_count": 2462,
+      "missing_count": 0,
+      "extra_count": 0,
+      "missing_examples": [],
+      "extra_examples": [],
+      "status": "PASS"
+    },
+    {
+      "condition": "motion_blur",
+      "clean_count": 2462,
+      "corruption_count": 2462,
+      "missing_count": 0,
+      "extra_count": 0,
+      "missing_examples": [],
+      "extra_examples": [],
+      "status": "PASS"
+    },
+    {
+      "condition": "jpeg_compression",
+      "clean_count": 2462,
+      "corruption_count": 2462,
+      "missing_count": 0,
+      "extra_count": 0,
+      "missing_examples": [],
+      "extra_examples": [],
+      "status": "PASS"
+    }
+  ]
+}
