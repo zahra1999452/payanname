@@ -328,3 +328,21 @@ class UnifiedTrainer:
                 cv2.imwrite(str(save_path), cv2.cvtColor(cam_image, cv2.COLOR_RGB2BGR))
             except Exception as e:
                 print(f"⚠️ خطا در Heatmap برای {img_path.name}: {e}")
+
+
+# UNIFIED TRAINER FOR YOLOv8 / RT-DETR / RTMDet
+# ... (همه importها و توابع قبلی بدون تغییر)
+
+# بخش train() - جایگزین از خط ۱۳۷ به بعد
+else:
+    raise NotImplementedError(
+        "Non-YOLO models (RT-DETR / RTMDet) are not supported in UnifiedTrainer. "
+        "Please use the dedicated scripts: train_rtdetr_l_6gb.py or train_rtmdet_tiny.py"
+    )
+
+# بخش evaluate() - جایگزین بخش else
+else:
+    raise NotImplementedError(
+        "Evaluation for non-YOLO models is not supported in UnifiedTrainer. "
+        "Use the dedicated evaluation scripts."
+    )
