@@ -1,36 +1,19 @@
-# Marine Debris Detection - Hypothesis Testing
-This directory contains the statistical evaluation framework for Chapter 4.
+# Scope of thesis evidence — 1 November 2026
 
-## Models
-1. YOLOv8n  2. RT-DETR-L  3. RTMDet-Tiny
+The root README is authoritative. H1–H3 stored CSVs and historical evaluation
+source are supplied in analysis_source_and_evidence.zip. The root H2 script,
+per_image_degradation.csv, h2_inferential_results.csv and run_manifest.json allow
+the six final H2 comparisons to be rechecked without a GPU or model weights.
 
-## Dataset
-Final 13-class dataset.
-Evaluation split: TEST
-Image size: 640 × 640
-Number of classes: 13
+H3: controlled synthetic transformation of the same 2462 test images. Historical
+uav_coastal_domain_shift names do not identify an independent real dataset.
+H3 inference uses D_mix; it must not be confused with absolute F1 drop D_abs.
 
-## Hypotheses
-### H1
-There is a statistically significant difference between the baseline performances of YOLOv8n, RT-DETR-L and RTMDet-Tiny.
+H4: descriptive/unverified only. Source F1: 0.757359 -> 0.723990,
+delta = -0.033369. No verified paired H4 p-value or confidence interval is supplied.
+Improvement on an independent target domain remains untested. Full H4 raw pairs,
+final weights and complete H3 target images/labels are unavailable.
 
-### H2
-The absolute degradation (D = clean_F1 − corrupted_F1) caused by controlled image corruptions differs significantly among the three models.
-
-### H3
-The degradation caused by **controlled synthetic domain shift** differs significantly among the three models.  
-**Note:** The target domain is a synthetic transformation of the same test images. No real UAV or coastal dataset was used.
-
-### H4
-Descriptive comparison of performance before and after limited target-domain adaptation on the selected model.  
-**Note:** No statistical hypothesis test (Wilcoxon or CI) is performed on target data because paired target labels are unavailable.
-
-## Statistical principle
-Because the same test images are evaluated by all models, comparisons are treated as paired comparisons.
-- Three models → Friedman test
-- Pairwise post-hoc → Wilcoxon signed-rank test + Holm correction
-- Primary unit: per-image matched metrics
-
-## Important
-This project does NOT execute training from scratch.  
-The scripts are for statistical analysis only.
+Training from scratch was not rerun in this revision. Most supplementary source
+retains historical paths and requires configuration plus missing data/weights.
+See the root README for executable commands, evidence inventory and limitations.
