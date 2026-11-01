@@ -1,220 +1,217 @@
 {
-  "prepared_date": "2026-11-01",
-  "base_commit": "4b9908084d575b6a9d33028db6cf257d772a246e",
-  "scope": "Supervisor corrections; static checks and H2 rerun; no GPU training/inference",
+  "base_commit": "2bd7fb30082c7ff4c9c476e14bc656f9183e00da",
+  "publication_commit": "containing GitHub commit",
+  "scope": "New supervisor audit corrections; code and evidence only; no model rerun",
+  "excluded_by_owner": [
+    "Word thesis",
+    "PowerPoint defense",
+    "private review documents"
+  ],
   "files": [
     {
-      "path": ".gitignore",
-      "bytes": 65,
-      "sha256": "1110bfc578122518a9711493f18d30156783d63d0253ef536fadf03b8b56e4fc"
-    },
-    {
-      "path": "__init__.py",
-      "bytes": 423,
-      "sha256": "153dc285d0b5583728c88c35b38226adc6cc2b3f7c3ba78b197d02a13fc0f923"
-    },
-    {
       "path": "analysis_source_and_evidence.zip",
-      "bytes": 2194297,
-      "sha256": "9d6a56e2f33bd6a637ab76e6e39c40b21cf3d14e019cae30f3542232bf5a17ff"
+      "bytes": 5037156,
+      "sha256": "4e0c8592ae1c9c416f09189a00aa231514b34d635ba9d711801fe1520b8865ed",
+      "git_blob_sha1": "d8bc01104c91565d1597d068eabed58e9782ff31"
     },
     {
-      "path": "bootstrap_results.csv",
-      "bytes": 554,
-      "sha256": "0102932a9cdbb7ddd7af0848b150554cfbbc3087345527b9568195f28a288179"
+      "path": "analyze_h1_sensitivity.py",
+      "bytes": 3210,
+      "sha256": "2b84f720f7df76074ca10f041cfd3c8307601911c28f3de84940a47cd3b1f1ef",
+      "git_blob_sha1": "5e1df76c13d56cca6de07a6c8aae0ce8f8bc6813"
     },
     {
-      "path": "check_rtdetr.py",
-      "bytes": 11313,
-      "sha256": "cbb976455f752a62de6c22851b27e3f68d965aa44709921cc0439dc2c6c137ba"
+      "path": "audit_support.py",
+      "bytes": 2951,
+      "sha256": "86d3f48ed3794a15d688fc5f426f4a972029e2ac3f2d552d4405413fe431743e",
+      "git_blob_sha1": "3565a9d2a21895b4eea97148edaed7dca59a7415"
     },
     {
-      "path": "config.py",
-      "bytes": 939,
-      "sha256": "7a0c5b541d78bfd382da619995e0efb851f2c8462f50aa0d15c205e8d5d24414"
+      "path": "CODE_CHANGES.patch",
+      "bytes": 5277,
+      "sha256": "2efbc438999c75ed8645c3a8d9f37a3e20a84b96c1b4385dfd34dd181abb856e",
+      "git_blob_sha1": "12fa84bd8709f07c3cf1fe6f0aa89c704b8f8f33"
     },
     {
       "path": "CORRECTIONS_STATUS.md",
-      "bytes": 2829,
-      "sha256": "3f7d970465ff96e66e8411748dbfd9e804c26931518f126c9618252adc63b2c3"
+      "bytes": 3051,
+      "sha256": "65a82370d1874040492f88779869f23d037964b1adc73874d33ab99a520bf0bd",
+      "git_blob_sha1": "5d3f762ab3dec015e1dc78a26f6d58c760a461a3"
     },
     {
-      "path": "domain_shift_summary.csv",
-      "bytes": 1482,
-      "sha256": "467bf237083e0d2687868ebdbe4496e7b5ae2e4f87c8aeff64f60310bd190f70"
+      "path": "environment_observed.json",
+      "bytes": 410,
+      "sha256": "facd6bf95deb694b95943d708c24060f79bc928ada2216249c6e88e06a91b15e",
+      "git_blob_sha1": "59e117d04b7765897ed366ab4351bdc235107c58"
     },
     {
-      "path": "EVIDENCE_PATHS.json",
-      "bytes": 1270,
-      "sha256": "5c7bd00ecf19a1bef29906a93ac582edee9650ee09f9c7ee2384ad6c4156fe07"
+      "path": "EVIDENCE_INDEX.csv",
+      "bytes": 21403,
+      "sha256": "57f0e219a92eea48a8af5ae99007abc59f3c6ed8979a37cb0310c3ba311422ec",
+      "git_blob_sha1": "9ef6358598050558585e14f4d123a3e0bdb8a3cb"
     },
     {
-      "path": "H1_descriptive_statistics.csv",
-      "bytes": 799,
-      "sha256": "0851f588c21cee9ed058a7989e8ed2631846881fe7ed1821dba8eb764887aa00"
+      "path": "EVIDENCE_INDEX.json",
+      "bytes": 33851,
+      "sha256": "b2c7950979a9b33c9150a81290fcac898626ce905698df66a3923bcdc1779bbf",
+      "git_blob_sha1": "ade8cb0ad91911ac0aaa420f67e4f03041858aef"
     },
     {
-      "path": "H1_mAP0.50.png",
-      "bytes": 88333,
-      "sha256": "7b01f6a8d48498d3f8d575bec56661e8794cc500ba18bc6b46e494f349d2946b"
+      "path": "H1_pairwise_wilcoxon_holm.csv",
+      "bytes": 371,
+      "sha256": "8590dd04f19a806733db3c495b9b68ef082ad11d63bc86cd67b40a13914d7147",
+      "git_blob_sha1": "8ded8baf4dde9a5fce9ddb3bc64a74e6166d7d4f"
     },
     {
-      "path": "H1_mAP0.50_0.95.png",
-      "bytes": 90159,
-      "sha256": "808681190d02440190d683db2c8c8b41f5ff878fef3ee6406e2504b7a1095a09"
+      "path": "h1_sensitivity_audit.json",
+      "bytes": 3331,
+      "sha256": "c3b26500677f5ace61f165ce6e36270f2690093cd3120a13e39c75822ae945d9",
+      "git_blob_sha1": "81b73d15fe73112b1ec7d182508571e62d72a8ff"
     },
     {
-      "path": "H1_statistics_summary.json",
-      "bytes": 18504,
-      "sha256": "51f8d2f6f1aba2ee91c08d65088a388aa970dd68f104658996c591de0567645c"
+      "path": "h1_sensitivity_verified.csv",
+      "bytes": 362,
+      "sha256": "110a26d87a6575defc0a1b8c9a6653bb1ab9af09304df9e962791e14d70d83df",
+      "git_blob_sha1": "0f2e8068556fbfeba266a2610ef4f4cde0aad7b9"
     },
     {
-      "path": "H2_degradation_summary.csv",
-      "bytes": 4247,
-      "sha256": "0199da80040a7743700d54bed0051ce0a7d7bc9d808804c1193522bb0f78a2a8"
+      "path": "H2_mean_signed_f1_drop.svg",
+      "bytes": 2051,
+      "sha256": "aba80d4f22a9446249923ea1bfe0ce32ec5ce76a7c52272541cdac5c98ef6175",
+      "git_blob_sha1": "b371fd0ee01af78f19e974bf3d02e964dc6e5138"
     },
     {
-      "path": "h2_inferential_results.csv",
-      "bytes": 1167,
-      "sha256": "72277102ee428104ec35af29ce8a9cadf1a50e84cd5731f2fa10f3f031c1eda6"
+      "path": "h2_signed_f1_analysis.py",
+      "bytes": 922,
+      "sha256": "6735112f1c1053e62c2919db11fd4cc2fb9796cf24bcacc55e8e3fb862b29632",
+      "git_blob_sha1": "036a82b6535810b9087c0be93c8859d636aa6b9a"
     },
     {
-      "path": "H2_publication_recheck_manifest.json",
-      "bytes": 852,
-      "sha256": "eec9886593b02b534023488ab1d308f7ff231dcdeb4ac0305c8f76180cac0d7f"
+      "path": "H3_domain_shift_statistics.csv",
+      "bytes": 830,
+      "sha256": "4284d118ccef6cbed83613334dfe5babd889178da6516b4ed2caf94a7be91870",
+      "git_blob_sha1": "b4efa57f49ccc763d5127f7a502b45dc96f455b5"
     },
     {
-      "path": "H2_run_configuration.json",
-      "bytes": 1477,
-      "sha256": "19738257e5fa8d709b1232b01c2e5d782a5bf7bb928e507f56f9d36d14f7ea65"
+      "path": "H3_model_comparison_statistics.csv",
+      "bytes": 676,
+      "sha256": "18dc4a28c2efca6048389a2900184b847021b8308ff52569770eafbac8ff977b",
+      "git_blob_sha1": "b5b7c6e9e40787b30c6f77b093dc7684d92da344"
     },
     {
-      "path": "h2_wilcoxon_holm_verified_v2.py",
-      "bytes": 7249,
-      "sha256": "f9461dbcfcee9b82d4f84ff872514e4433c491b77edd0e2ef17f32d24a7e76c9"
+      "path": "H4_args_historical.yaml",
+      "bytes": 1935,
+      "sha256": "918c43fe8c217300b4fbf1aabfd0ec7c21f8a5ba6b3f952721d749b603be053d",
+      "git_blob_sha1": "cbc6ba9b54d2d0b1a5606480beb74388592ff262"
     },
     {
-      "path": "H3_run_configuration.json",
-      "bytes": 2799,
-      "sha256": "5bbb612facacdd77bdef457a53d8dff9ebc568f0fb647d3802680814eee28595"
+      "path": "H4_results_historical.csv",
+      "bytes": 1855,
+      "sha256": "22911e56de04bcd66c6b845dcbb38068008fba72948679ee369d63842a8d25b0",
+      "git_blob_sha1": "043e186e70fa7dd5c98be4df725fa2663cf2bf1c"
     },
     {
-      "path": "H3_run_configuration_corrected.json",
-      "bytes": 2967,
-      "sha256": "3800cbb67e552dd361393a4e7f8b99c2594dab07287654ce84256b70ffb9c5b4"
+      "path": "make_signed_h2_plot.py",
+      "bytes": 1927,
+      "sha256": "1fb6c1cbca2e37d28b281062517054b40077f856cc6612afb28d270e45a23e4b",
+      "git_blob_sha1": "9e5bc102de3b8da5749bfc28fde00538a57a3ee4"
     },
     {
-      "path": "H3_target_manifest.csv",
-      "bytes": 900538,
-      "sha256": "417dcf0aa4243a708a4baeed0be0805fa3a3fcc92598bdabe76512c5caceb01f"
-    },
-    {
-      "path": "per_image_degradation.csv",
-      "bytes": 6216267,
-      "sha256": "15d46b585c72913e53275e1314552359f664ef2c96a979356b572eadc3ad278b"
-    },
-    {
-      "path": "per_image_domain_shift.csv",
-      "bytes": 1169279,
-      "sha256": "82e6eb54d8366fde7702970c7918f99a90bb82a3c403064370b740ea015be5b4"
-    },
-    {
-      "path": "per_image_metrics.csv",
-      "bytes": 1196450,
-      "sha256": "a6aaa37e286d38f44fac493e7ba103c82bf82228e0cc0a58043204c31d507107"
+      "path": "PUBLICATION_SCOPE.json",
+      "bytes": 553,
+      "sha256": "0e39c6f09765b96bf608c7a95aa2c4aa655dc074ae7c4933f6086b74ef7e0b9f",
+      "git_blob_sha1": "9fba9346e582eca6c5a19b39eda2dab0ffe403c1"
     },
     {
       "path": "README.md",
+      "bytes": 6646,
+      "sha256": "9a08017b1673a4d99b2d3d97587019f1b03a5f278eb27ae4b93c27aeebffc8a4",
+      "git_blob_sha1": "c630f74cbcd5623725901794a29fafbb6ef57c5c"
+    },
+    {
+      "path": "README_AUDIT_CORRECTIONS_FA.md",
+      "bytes": 6404,
+      "sha256": "b6d14703aa0f827dc1d71cd9981504371ffcac7725ff37848e252048e986e7c9",
+      "git_blob_sha1": "20cdbb8f6d777a99a2038de402608eeae3c36ae1"
+    },
+    {
+      "path": "README_PREVIOUS_PUBLICATION.md",
       "bytes": 11845,
-      "sha256": "b8282cc7c6fb6964ea29ec8c833fa438d9f06379ee181b72a852fb3b4a691935"
+      "sha256": "b8282cc7c6fb6964ea29ec8c833fa438d9f06379ee181b72a852fb3b4a691935",
+      "git_blob_sha1": "5b66eb55c7bf3cf915fbe308ee2cba3259041214"
     },
     {
-      "path": "rtdetr_train.py",
-      "bytes": 25992,
-      "sha256": "381c63c6a65e9333482a8e3a8ff95aad3eb1b62f7d186a297118b71ea5b45520"
+      "path": "requirements_audit_observed.txt",
+      "bytes": 89,
+      "sha256": "3ab79f497176af4079036d2d15a5178cf7cfeefe14b05d0fd10d6b9ec949aad2",
+      "git_blob_sha1": "b28c74baf5a734e81917141c298ed7a69f43c7d2"
     },
     {
-      "path": "rtmdet_train.py",
-      "bytes": 10801,
-      "sha256": "6e371bdc6f4ee30f8910a2b8e4c16c6bf3ecff9d134519e0946a3fed6d5b1b56"
+      "path": "signed_domain_shift_summary.csv",
+      "bytes": 1480,
+      "sha256": "a5bb38808bf6f5444107db9ff8e28bdf84d94bd77482df1b1d4f7808d27a9c83",
+      "git_blob_sha1": "ade335ab4ae39146ceb24e37249905a55bcb8b33"
     },
     {
-      "path": "run_manifest.json",
-      "bytes": 852,
-      "sha256": "2f06891754718f0bec2f44f5b23430f306b5ba3fcc9904d86254a43039112334"
+      "path": "signed_H2_degradation_summary.csv",
+      "bytes": 4262,
+      "sha256": "c849bed9d2d87db694d44d7447464bdb8db6ee356cab4ec8353b17b431495752",
+      "git_blob_sha1": "40d57dd4855ee3a6cc5e4bca2b19d2af40f5d3e5"
     },
     {
-      "path": "run_rtdetr.py",
-      "bytes": 930,
-      "sha256": "1a439c68cefddb11cec3ffb655fbd80474f773a9cb50c68972aefff180087890"
+      "path": "SIGNED_METRIC_SCHEMA.json",
+      "bytes": 258,
+      "sha256": "b24d3b7891de7051b884001a2c9e62b31c6266df4189b8f47548ae784610b215",
+      "git_blob_sha1": "b1e65cd8da1376f7e4ee355996e3a945c2624891"
     },
     {
-      "path": "test.py",
-      "bytes": 16144,
-      "sha256": "194db1fe38cb7bd55f03cceff291d718db5fa7c5acb8e10d9665ebf2cd13c96a"
+      "path": "test_audit_fixes.py",
+      "bytes": 4003,
+      "sha256": "d5f658217d8321ccd50c71e887e29609835aac1cced275d086c43c38e6305db4",
+      "git_blob_sha1": "be30bb0c947402ce0dc36cd1361b26a3812e4dfc"
     },
     {
       "path": "train_rtdetr_l_6gb.py",
-      "bytes": 33415,
-      "sha256": "0db059620e55d03a9238741ce89f2cd69660f78990e63793ad298ee2645e4b6a"
+      "bytes": 35084,
+      "sha256": "e3ebc46671d7ff6d671b58cfe6a84a55ac96148938b9dc9bd0629cdd5fdfdca0",
+      "git_blob_sha1": "92036814e1d427f3f8781d64fc8377a23286bbb8"
     },
     {
       "path": "train_rtmdet_tiny.py",
-      "bytes": 40005,
-      "sha256": "23026ac24baf3328f71513920cf1465acf703406b793e7319f397ae4b6f6f046"
-    },
-    {
-      "path": "train_yolov8.py",
-      "bytes": 531,
-      "sha256": "bdb90fcf6257bdeebfb52820fa871140853d7697cf8819547fa28a98c49d841b"
+      "bytes": 42024,
+      "sha256": "8f027af79ad6a425c870f4726047bbd919017f066b3acb2c7f7e195c216f853c",
+      "git_blob_sha1": "615e479ce67b7a98932f9b337675bb37a2785059"
     },
     {
       "path": "unified_trainer.py",
-      "bytes": 13742,
-      "sha256": "6846b8c7c3a8fde18a29ebfe8fc6304bb581006f75183cbe75b704724daf38f4"
+      "bytes": 13916,
+      "sha256": "276c709c1ec7176704961503c79142cafd9f95bb665e419959b07f45abfbf707",
+      "git_blob_sha1": "b1a35fb9b2d18a5fd9a5a49b1cb825dd6c52730c"
+    },
+    {
+      "path": "validate_audit.py",
+      "bytes": 2687,
+      "sha256": "0e43eac289b878ec7460ebbfca0e091dc96f53bdc786cd97d0f1ae0576ffdd69",
+      "git_blob_sha1": "53ebe43c8db3e1283e922116a7e3eab8d08ef6d0"
     },
     {
       "path": "VALIDATION.json",
-      "bytes": 3144,
-      "sha256": "f598e86a62c52ff78fa9db942b342fad8a85e9d4197991ca5be31ce22c14a003"
+      "bytes": 6271,
+      "sha256": "7ceb3f072a1747d3aa6385ad4ebdfb694b3f437a3bc959d44fd890e69da3f023",
+      "git_blob_sha1": "357a8a305b89782a05dc7aef2ac3ca54db0a0041"
     },
     {
-      "path": "yolov8_train.py",
-      "bytes": 267,
-      "sha256": "d91790d71c16ed2e46b72efa87cc673d90ad83b7550058fbdbfaa26fe1a83e60"
+      "path": "VALIDATION_CURRENT.json",
+      "bytes": 6271,
+      "sha256": "7ceb3f072a1747d3aa6385ad4ebdfb694b3f437a3bc959d44fd890e69da3f023",
+      "git_blob_sha1": "357a8a305b89782a05dc7aef2ac3ca54db0a0041"
     }
   ],
-  "unavailable": [
-    {
-      "item": "weights for H1–H4",
-      "status": "not supplied",
-      "effect": "epoch, binary hash and checkpoint selection cannot be independently verified"
-    },
-    {
-      "item": "complete labels/test and annotation version",
-      "status": "not supplied",
-      "effect": "per-class GT counts, including class 9, cannot be independently verified"
-    },
-    {
-      "item": "complete H3 target images and labels",
-      "status": "not supplied",
-      "effect": "synthetic dataset cannot be fully regenerated/checked against stored data"
-    },
-    {
-      "item": "per_image_adaptation.csv and H4 evaluation configuration",
-      "status": "not supplied",
-      "effect": "paired H4 statistics and raw row count not independently reproduced"
-    },
-    {
-      "item": "original training environment export and full baseline validation logs",
-      "status": "not supplied",
-      "effect": "training versions and best-weight selection not independently verified"
-    }
-  ],
-  "validation": "VALIDATION.json",
-  "publication_commit": "Use the GitHub commit containing this manifest; no self-referential commit hash is embedded.",
-  "excluded_by_owner": [
-    "Word thesis (.docx)",
-    "PowerPoint defense (.pptx)"
+  "tracked_pyc_removal_requested": [
+    "__init__.cpython-313.pyc",
+    "rtdetr_train.cpython-313.pyc",
+    "rtmdet_train.cpython-313.pyc",
+    "unified_trainer.cpython-313.pyc",
+    "yolov8_train.cpython-313.pyc"
   ]
 }

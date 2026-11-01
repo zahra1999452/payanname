@@ -1,126 +1,48 @@
-# پایان‌نامه تشخیص پسماندهای دریایی — نسخه اصلاحات استاد
+# پایان‌نامه زهرا فولادوند — کد و شواهد اصلاح‌شده ممیزی
 
-این نسخه کد، شواهد موجود و دامنه ادعاها را مطابق گزارش اصلاحات ۲۹ اکتبر ۲۰۲۶ مستند می‌کند.
-تاریخ آماده‌سازی: ۱ نوامبر ۲۰۲۶. کد آموزش و استنتاج در این اصلاح دوباره اجرا نشده است.
-مرجع نهایی، commit حاوی این README و PUBLICATION_MANIFEST.json است؛ SHA همان commit را از تاریخچه گیت‌هاب استناد کنید.
+**دامنه قابل دفاع: اصلاح کد و بازتحلیل خروجی‌های باقی‌مانده. بازتولید مستقل آموزش/استنتاج تأیید نشده است.**
 
-## دامنه علمی
+این انتشار مطابق پایان‌نامه نهایی جدید با SHA256 زیر آماده شده است:
+`8fef4f871c30540305a5b5a99a1b4e6b7ca1e3c53ca3c4e58daa102466eba9ad`.
+نسخه Word پایان‌نامه، پاورپوینت و گزارش خصوصی استاد عمداً منتشر نمی‌شوند.
 
-| بخش | دامنه قابل پشتیبانی |
-|---|---|
-| H1 | بازبررسی خروجی ذخیره‌شده سه مدل؛ آموزش مستقل از صفر تأیید نشده است. |
-| H2 | تفاضل جهت‌دار F1 با D_abs = clean_F1 − corrupted_F1؛ علامت abs به معنی قدرمطلق ریاضی نیست. اجرای رسمی Wilcoxon/Holm زیر بازبینی شده است. |
-| H3 | فقط controlled synthetic domain shift روی همان ۲۴۶۲ تصویر آزمون؛ نام تاریخی uav_coastal_domain_shift به معنی داده واقعی مستقل پهپادی/ساحلی نیست. استنباط تاریخی H3 بر D_mix است؛ اندازه اثر Kendall W حدود ۰٫۰۰۳ و بسیار کوچک است. |
-| H4 | descriptive/unverified: F1 مبدأ 0.757359 → 0.723990، اختلاف −0.033369؛ نتیجه توصیفی بازتولیدنشده است. داده زوجی خام/پیکربندی کامل در دسترس نیست؛ p و CI قدیمی تأیید نشده‌اند. بهبود در دامنه هدف آزمون‌نشده است. |
+## دریافت بسته کامل و اجرای کنترل‌ها
 
-## ساختار واقعی انتشار
+تمام کدها، هفت config مرجع و وابستگی‌های آن‌ها، 26 خروجی جدول/شکل فصل چهارم، CSVها، logها و هش‌ها در [analysis_source_and_evidence.zip](analysis_source_and_evidence.zip) هستند. فایل‌های تکی ریشه برای بازرسی سریع‌اند؛ برای اجرای کامل و تطبیق تعداد فایل‌های آزمون، ابتدا آرشیو را در پوشه جدا استخراج کنید. پوشه hypothesis_tests در شاخه عمومی به‌تنهایی همه کدها را ندارد؛ نسخه کامل داخل آرشیو است.
 
-اسکریپت‌های آموزش در **ریشه همین مخزن** هستند؛ لازم نیست وارد پوشه models یا project_marine_debris_detection شوید.
-فایل‌های H2 و CSVهای اصلی H1/H3 نیز برای بررسی مستقیم در ریشه قرار دارند.
-`EVIDENCE_PATHS.json` محل متناظر هر فایل در بسته تحلیل را نشان می‌دهد.
-`analysis_source_and_evidence.zip` نسخه دارای ساختار کامل اسکریپت‌های تاریخی تحلیل، داده‌های موجود و مستندات است.
-برای مشاهده آن در PowerShell:
+از ریشه مخزن در PowerShell:
 
 ```powershell
-Expand-Archive -LiteralPath .\analysis_source_and_evidence.zip -DestinationPath .\analysis_bundle
+Expand-Archive -LiteralPath .\analysis_source_and_evidence.zip -DestinationPath .\audit_source
+Set-Location .\audit_source
+python -B validate_audit.py
 ```
 
-بسته شامل hypothesis_tests/scripts/H1 تا H4، results2، h2_output است.
-بنا به انتخاب مالک، فایل Word پایان‌نامه و PowerPoint دفاع در این انتشار عمومی قرار ندارند.
-این انتشار فقط کد، شواهد موجود و مستندات را شامل می‌شود؛ اصلاح اسلایدها/متن Word از همین مخزن قابل تأیید نیست.
+Python دارای NumPy لازم است؛ `requirements_audit_observed.txt` فقط نسخه مشاهده‌شده آزمون‌های جاری را ثبت می‌کند و lock آموزش نیست. با Python و محیط مناسب خود نصب/اجرا کنید؛ محیط تاریخی آموزش بازسازی نشده است. اگر پوشه audit_source از قبل وجود دارد، نسخه قبلی را جدا نگه دارید و مسیر تازه انتخاب کنید.
 
-## بازاجرای رسمی و مستقل H2 — بدون GPU و وابستگی اضافی
+در Linux/macOS آرشیو را در پوشه تازه استخراج و همان فرمان Python را از داخل آن اجرا کنید. پیکربندی RTMDet از `MMDET_RTMDET_CONFIG` یا snapshot همراه و سپس محل نصب mmdet کشف می‌شود؛ استقرار واقعی این مدل روی محیط مقصد هنوز آزموده نشده است.
 
-به Python 3.10+ و فقط کتابخانه استاندارد نیاز دارد. اجرای کنترل‌شده این نسخه با Python 3.12.13 انجام شد.
-از ریشه مخزن:
+## نتایج کنترل‌ها
 
-```powershell
-python h2_wilcoxon_holm_verified_v2.py per_image_degradation.csv --out h2_recheck
-```
+50 فایل Python از نظر نحو بدون خطا؛ 5 آزمون واحد موفق؛ حساسیت H1 با 7386 رکورد؛ H2 با تطابق بایت‌به‌بایت شش ردیف خروجی. سه import واقعی به علت نبود cv2/torch در محیط ممیزی ناموفق بودند. `integration_passed=false` است و آموزش، استنتاج، یک‌epoch train/val و COCOeval انجام نشده‌اند. جزئیات در [VALIDATION_CURRENT.json](VALIDATION_CURRENT.json)، و logها داخل آرشیو است. کد خروجی صفر validate_audit فقط موفقیت کنترل ایستا و بازتحلیل CSV را نشان می‌دهد؛ integration را جدا بخوانید.
 
-خروجی شش‌ردیفی `h2_recheck/h2_inferential_results.csv` باید با فایل ریشه `h2_inferential_results.csv` مقایسه شود.
-قرارداد: میانگین شش شرط برای هر تصویر، n=2462؛ اختلاف‌های زوجی با گردکردن ۱۲ رقم؛ حذف صفر از رتبه‌ها؛
-Wilcoxon دوطرفه با تقریب نرمال و تصحیح tie، بدون تصحیح پیوستگی؛ Holm جداگانه در هر خانواده سه‌مقایسه‌ای.
-صفرهای تحلیل اصلی به ترتیب RT-DETR-L/RTMDet-Tiny، RT-DETR-L/YOLOv8n، RTMDet-Tiny/YOLOv8n: **267، 351، 260**.
-سه ردیف pooled با n=14772 صرفاً تحلیل حساسیت‌اند؛ شش شرط هر تصویر مستقل نیستند.
-نسخه رسمی یگانه `h2_wilcoxon_holm_verified_v2.py` است؛ ورودی `degradation` ترکیبی را به جای D_abs قبول نمی‌کند.
-رابط قدیمی H2 داخل بسته فقط به همین پیاده‌سازی ارجاع می‌دهد.
+## اصلاحات جدید
 
-SHA-256 ورودی: `15d46b585c72913e53275e1314552359f664ef2c96a979356b572eadc3ad278b`
+ورود فعال os و سازنده RTDETR؛ خواندن تاریخچه YOLO از مسیر واقعی trainer.csv؛ تبدیل NumPy به JSON استاندارد؛ مسیر config قابل حمل؛ حذف torch.load ناامن صرفاً برای نمایش metadata؛ schema و نمودار جدید افت علامت‌دار؛ فهرست شواهد همه اجزای واقعی فصل چهارم. [پاسخ 17بندی](CORRECTIONS_STATUS.md) و [راهنمای کامل بسته](README_AUDIT_CORRECTIONS_FA.md) را ببینید.
 
-SHA-256 اسکریپت رسمی: `f9461dbcfcee9b82d4f84ff872514e4433c491b77edd0e2ef17f32d24a7e76c9`
+`D_signed = F1_clean - F1_condition` است؛ مقدار منفی به معنی بهبود است. نام قدیمی D_abs/absolute_f1_drop قدرمطلق ریاضی نیست. CSVهای اصلی و اسکریپت رسمی H2 بدون تغییر حفظ شده‌اند؛ `signed_*.csv` و `H2_mean_signed_f1_drop.svg` برچسب صحیح جدید دارند. خود فایل پایان‌نامه در این انتشار تغییر یا بارگذاری نشده است.
 
-SHA-256 خروجی شش‌ردیفی: `72277102ee428104ec35af29ce8a9cadf1a50e84cd5731f2fa10f3f031c1eda6`
+## حدود نتایج پژوهش
 
-`run_manifest.json` اجرای ثبت‌شده قبلی را نگه می‌دارد؛ هر بازاجرا manifest زمانی جدید خود را می‌سازد.
-`VALIDATION.json` نتیجه کنترل انتشار را ثبت می‌کند. یکسانی خروجی H2 در این آماده‌سازی مجدداً کنترل شد.
+- H1: YOLOv8n بالاترین میانگین F1 تصویرمحور؛ RT-DETR-L بالاترین mAP سفارشی. AP سفارشی 101نقطه‌ای با conf=0.25 معادل COCOeval رسمی فرض نمی‌شود. خروجی AP شامل 12 شناسه در برابر 13 کلاس آموزش است؛ علت غیبت کلاس 9 بدون برچسب خام احراز نشده است.
+- H2: 2462 تصویر، میانگین شش شرط در هر تصویر؛ تحلیل pooled وابسته است. استقلال فریم‌ها و تولید تاریخی نویز تضمین نشده است.
+- H3: فقط یک تغییر مصنوعی روی همان 2462 تصویر؛ دامنه واقعی مستقل یا اثبات تعمیم UAV نیست. Kendall W=0.003042 کوچک است.
+- H4: نقل توصیفی F1 مبدأ 0.757359 به 0.723990؛ target improvement آزمون نشده است. داده زوجی و وزن قبل/بعد غایب‌اند؛ p/CI تاریخی مبنای ادعای تأییدشده نیستند. انتخاب YOLO از قاعده رتبه‌جمعی پیروی نکرده است.
 
-## مسیرهای واقعی آموزش و فایل‌های Legacy
+وزن‌ها، labels و split کامل، group-id معتبر، lock اصلی آموزش، انتخاب مستقل checkpoint، ارزیابی COCO مشترک و benchmark مشترک FPS/latency موجود نیستند. این کمبودها با اصلاح متن رفع نشده‌اند.
 
-| مدل | مسیر مرجع مستندشده در پایان‌نامه | وضعیت |
-|---|---|---|
-| YOLOv8n | unified_trainer.py؛ CLI جدید train_yolov8.py | فقط YOLO؛ درخواست غیر YOLO پیش از ساخت خروجی با NotImplementedError متوقف می‌شود. |
-| RT-DETR-L | train_rtdetr_l_6gb.py | اسکریپت اختصاصی؛ وزن ثبت‌شده ارزیابی last.pt است، نه best اثبات‌شده. |
-| RTMDet-Tiny | train_rtmdet_tiny.py | اسکریپت اختصاصی MMDetection. |
+## هویت شواهد
 
-`rtmdet_train.py` یک wrapper قدیمی است؛ تولید تاریخچه/سنجه نمایشی حذف و ورودی‌های اجرای آن غیرفعال شده‌اند.
-`rtdetr_train.py` و `run_rtdetr.py` پیش‌نویس‌اند و مسیر نتایج پایان‌نامه محسوب نمی‌شوند.
-`yolov8_train.py` فقط نام سازگاری برای UnifiedTrainer است؛ پیاده‌سازی آماری یا آموزشی موازی ندارد.
-`__init__.py` دیگر کلاس RTDETRTrainer ناموجود را import نمی‌کند.
-فایل‌های pyc قدیمی از قبل در تاریخچه هستند و مرجع این اصلاح نیستند؛ .gitignore از افزودن نمونه‌های جدید جلوگیری می‌کند.
+[EVIDENCE_INDEX.json](EVIDENCE_INDEX.json) و CSV متناظر، 14 جدول واقعی و 12 تصویر فصل چهارم را به خروجی استخراج‌شده و منابع موجود پیوند می‌دهند. فایل‌های chapter4_exports داخل آرشیو هستند. استخراج جدول/تصویر از پایان‌نامه، بازتولید مستقل نتیجه نیست؛ `complete_provenance=false` است. فایل‌های تاریخی H4 و منحنی‌ها همین محدودیت را دارند.
 
-محیط اصلی کامل آموزش و تمام نسخه‌های کتابخانه‌ها بازیابی نشده‌اند. `config.py` تنظیم قابل‌حمل جدید با پیش‌فرض‌های صریح کد است و بازسازی قطعی تنظیمات تاریخی محسوب نمی‌شود.
-وابستگی‌های مدل‌ها شامل PyTorch/Ultralytics و برای RTMDet شامل MMDetection/MMEngine هستند؛ سازگاری محیط باید جداگانه بررسی شود.
-فرمان‌های زیر **فقط پس از بازیابی دیتاست و محیط مدل‌ها** هستند؛ در این اصلاح اجرا نشده‌اند:
-
-```powershell
-$env:MARINE_DATASET_ROOT = 'C:\path\to\recovered_dataset'
-python train_yolov8.py --data "$env:MARINE_DATASET_ROOT/data.yaml"
-python train_rtdetr_l_6gb.py
-python train_rtmdet_tiny.py
-```
-
-برای ادامه آموزش RT-DETR/RTMDet از --resume استفاده کنید. --test در RT-DETR آزمون کوتاه آموزش و در RTMDet ارزیابی TEST است؛ این دو معنا یکسان نیستند.
-گزینه‌های MARINE_PROJECT_ROOT و MARINE_RESULTS_ROOT نیز به‌ترتیب مسیر ریشه اسکریپت‌های اختصاصی و خروجی YOLO را قابل تنظیم می‌کنند.
-
-## فرمان‌های تاریخی H1 تا H4 در بسته تحلیل
-
-پس از استخراج آرشیو و `cd analysis_bundle`، مقادیر ALL_CAPS را با فایل‌های واقعی بازیابی‌شده جایگزین کنید.
-فرمان‌های H1–H3 به وزن‌ها/تصاویر/برچسب‌ها و محیط مناسب نیاز دارند و بازاجرای آن‌ها در این اصلاح انجام نشده است:
-
-```powershell
-python hypothesis_tests/scripts/H1/H1_controlled_baseline_map_cached.py --test-images SOURCE_IMAGES --test-labels SOURCE_LABELS --yolov8 YOLO_BEST_PT --rtdetr RTDETR_LAST_PT --rtmdet RTMDET_EPOCH146_PTH --rtmdet-config RTMDET_CONFIG --output H1_NEW_OUTPUT --imgsz 640 --conf 0.25 --iou 0.50
-python hypothesis_tests/scripts/H2/run_h2_complete.py --test-images SOURCE_IMAGES --test-labels SOURCE_LABELS --corruption-root CORRUPTION_IMAGES --yolov8 YOLO_BEST_PT --rtdetr RTDETR_LAST_PT --rtmdet RTMDET_EPOCH146_PTH --rtmdet-config RTMDET_CONFIG --imgsz 640 --conf 0.25 --iou 0.50
-python hypothesis_tests/scripts/H3/run_h3_complete.py --source-images SOURCE_IMAGES --source-labels SOURCE_LABELS --target-images SYNTHETIC_IMAGES --target-labels SYNTHETIC_LABELS --yolov8 YOLO_BEST_PT --rtdetr RTDETR_LAST_PT --rtmdet RTMDET_EPOCH146_PTH --rtmdet-config RTMDET_CONFIG --pairing-mode paired --imgsz 640 --conf 0.25 --iou 0.50
-```
-
-H4 رابط CLI ندارد. پس از بازیابی ورودی‌ها باید PROJECT_ROOT، DATASET_ROOT و BASE_MODEL در بخش CONFIGURATION تنظیم شوند:
-
-```powershell
-python hypothesis_tests/scripts/H4/run_h4_end_to_end.py
-```
-
-پارامترهای تاریخی H4: imgsz=640، conf=0.25، IoU=0.50، seed=42، سقف 20 دوره، batch=10، lr0=1e-4؛ لاگ موجود 14 دوره دارد.
-این فرمان جایگزین آزمون مستقل بهبود هدف نیست. ورودی قدیمی run_h4_statistics.py برای این نسخه غیرفعال است.
-سایر اسکریپت‌های تکمیلی آرشیو مسیرها/نام‌های تاریخی دارند و مرجع ادعاهای تازه یا بازاجرای تأییدشده نیستند.
-
-## شواهد موجود و غایب
-
-موجود: سورس‌های آموزش؛ سورس تاریخی ارزیابی؛ CSVهای H1–H3؛ manifest تبدیل مصنوعی H3؛
-کد و خروجی رسمی H2؛ لاگ 14 دوره H4؛ هش فایل‌های انتشار.
-
-غایب: وزن نهایی مدل‌های H1–H4؛ تصاویر/برچسب کامل اصلی و هدف H3؛ داده خام زوجی H4؛
-خروجی کامل محیط آموزش؛ لاگ‌های کامل انتخاب checkpoint. لینک قانونی پایدار این موارد نیز ارائه نشده است؛ لینک یا هش ساختگی ساخته نشده است.
-
-محدودیت‌ها: ۱۳ کلاس آموزشی در برابر ۱۲ شناسه AP؛ علت غیبت کلاس ۹ بدون برچسب خام نامعلوم است.
-سنجه mAP سفارشی با ۱۰۱ نقطه و conf≥0.25، تفاوت ظرفیت و recipe مدل‌ها، تک‌بذری‌بودن آموزش،
-وابستگی احتمالی فریم‌های هم‌منبع، نویز H2 بدون بذر صریح و نبود benchmark مشترک FPS باید در تفسیر حفظ شوند.
-وجود CSV امکان بازتحلیل خروجی را می‌دهد و به معنی تأیید مستقل آموزش از صفر نیست.
-
-## English scope
-
-H3 is a controlled synthetic transformation of the same 2462 test images, never an independent real UAV/coastal dataset.
-H4 is descriptive/unverified: source F1 0.757359 to 0.723990, delta -0.033369; target improvement is untested.
-No verified H4 p-value/CI or best-checkpoint claim is made. The canonical H2 script is standard-library-only;
-all six output rows were rechecked byte-for-byte. GPU training/inference was not rerun.
-See PUBLICATION_MANIFEST.json for SHA-256 inventory and VALIDATION.json for checks.
+ثبت مبنای اصلاح: `2bd7fb30082c7ff4c9c476e14bc656f9183e00da`. نسخه انتشار، commit حاوی این فایل‌هاست؛ هش خودارجاع ساخته نشده است. [PUBLICATION_MANIFEST.json](PUBLICATION_MANIFEST.json) هویت فایل‌های بارگذاری و هش آرشیو را ثبت می‌کند. README_PREVIOUS_PUBLICATION.md سابقه انتشار قبلی است.

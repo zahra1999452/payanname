@@ -1,0 +1,11 @@
+{
+  "definition": "D_signed = clean_F1 - condition_F1",
+  "negative": "improvement",
+  "legacy_aliases": [
+    "D_abs",
+    "absolute_f1_drop",
+    "mean_absolute_f1_drop"
+  ],
+  "original_files_modified": false,
+  "absolute_value_applied": false
+}

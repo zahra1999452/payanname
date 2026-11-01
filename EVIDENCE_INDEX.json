@@ -1,0 +1,534 @@
+{
+  "thesis": "پایان‌نامه نهایی آماده دفاع ـ بازبینی کامل استاد.docx",
+  "thesis_sha256": "8fef4f871c30540305a5b5a99a1b4e6b7ca1e3c53ca3c4e58daa102466eba9ad",
+  "items": [
+    {
+      "id": "table-body-2108",
+      "kind": "table",
+      "caption": "مقایسه معیارهای Precision، Recall و mAP مدل ها درارزیابی H1",
+      "export_file": "chapter4_exports/table-body-2108.csv",
+      "export_sha256": "b0570cf1df66b47cf08a696589c887cbb24f0544c45ada226f0c1a5343fcf7a7",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [
+        {
+          "path": "H1_descriptive_statistics.csv",
+          "sha256": "0851f588c21cee9ed058a7989e8ed2631846881fe7ed1821dba8eb764887aa00"
+        },
+        {
+          "path": "H1_statistics_summary.json",
+          "sha256": "51f8d2f6f1aba2ee91c08d65088a388aa970dd68f104658996c591de0567645c"
+        }
+      ],
+      "status": "archived_results; no model rerun",
+      "command": "See original analysis scripts; exact historical plot generation not independently replayed",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "table-body-2112",
+      "kind": "table",
+      "caption": "آمارتوصیفی معیارF1 درشرایط پایه",
+      "export_file": "chapter4_exports/table-body-2112.csv",
+      "export_sha256": "f9f2058952b851d1380d28f8f7c2ac573556db3d8a636f65eff89a5e1fe5720a",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [
+        {
+          "path": "per_image_metrics.csv",
+          "sha256": "a6aaa37e286d38f44fac493e7ba103c82bf82228e0cc0a58043204c31d507107"
+        }
+      ],
+      "status": "archived_results; no model rerun",
+      "command": "See original analysis scripts; exact historical plot generation not independently replayed",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "table-body-2116",
+      "kind": "table",
+      "caption": "جدول تکمیلی ۴-۲-الف ـ حساسیت میانگین F1 به قرارداد تصاویر فاقد GT",
+      "export_file": "chapter4_exports/table-body-2116.csv",
+      "export_sha256": "acca2693e253e57907edaca9e617d29fb31bb4a7aa628b9ee8a400c1a96b6b79",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [
+        {
+          "path": "h1_sensitivity_verified.csv",
+          "sha256": "110a26d87a6575defc0a1b8c9a6653bb1ab9af09304df9e962791e14d70d83df"
+        },
+        {
+          "path": "per_image_metrics.csv",
+          "sha256": "a6aaa37e286d38f44fac493e7ba103c82bf82228e0cc0a58043204c31d507107"
+        }
+      ],
+      "status": "recomputed descriptive sensitivity",
+      "command": "python analyze_h1_sensitivity.py",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "figure-body-2118",
+      "kind": "figure",
+      "caption": "مقایسه میانگین F1 مدل‌ها در شرایط پایه (H1)",
+      "export_file": "chapter4_exports/figure-body-2118.png",
+      "export_sha256": "d727b37960a2eb899d3a0fab24d3786c671a7110222ede5f72c4dc171c249346",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [
+        {
+          "path": "per_image_metrics.csv",
+          "sha256": "a6aaa37e286d38f44fac493e7ba103c82bf82228e0cc0a58043204c31d507107"
+        }
+      ],
+      "status": "archived_results; no model rerun",
+      "command": "See original analysis scripts; exact historical plot generation not independently replayed",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "table-body-2128",
+      "kind": "table",
+      "caption": "مقایسه های زوجی مدل هادرارزیابی H1",
+      "export_file": "chapter4_exports/table-body-2128.csv",
+      "export_sha256": "c1150fbbd22c848e32f3fb562cecdf6b8f80e579caa58ed29c050fac82931a93",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [
+        {
+          "path": "H1_pairwise_wilcoxon_holm.csv",
+          "sha256": "8590dd04f19a806733db3c495b9b68ef082ad11d63bc86cd67b40a13914d7147"
+        }
+      ],
+      "status": "archived_results; no model rerun",
+      "command": "See original analysis scripts; exact historical plot generation not independently replayed",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "table-body-2134",
+      "kind": "table",
+      "caption": "مقادیر Precision، RecallوF1تجمیعی (Micro)در ارزیابیH1",
+      "export_file": "chapter4_exports/table-body-2134.csv",
+      "export_sha256": "45d1b14029194218378b359f568711dc62c47c7b21a142d00f7dc65998843da3",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [
+        {
+          "path": "per_image_metrics.csv",
+          "sha256": "a6aaa37e286d38f44fac493e7ba103c82bf82228e0cc0a58043204c31d507107"
+        }
+      ],
+      "status": "archived_results; no model rerun",
+      "command": "See original analysis scripts; exact historical plot generation not independently replayed",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "figure-body-2136",
+      "kind": "figure",
+      "caption": "مقایسه Micro Precision، Micro Recall و Micro F1 مدل‌ها در H1",
+      "export_file": "chapter4_exports/figure-body-2136.png",
+      "export_sha256": "7c2abfe89a1f70e08135d277fa381641f6b5ed2fe51bc064b4a18c3494dc93bd",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [
+        {
+          "path": "per_image_metrics.csv",
+          "sha256": "a6aaa37e286d38f44fac493e7ba103c82bf82228e0cc0a58043204c31d507107"
+        }
+      ],
+      "status": "archived_results; no model rerun",
+      "command": "See original analysis scripts; exact historical plot generation not independently replayed",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "figure-body-2139",
+      "kind": "figure",
+      "caption": "مقایسه mAP@0.50 مدل‌ها در H1",
+      "export_file": "chapter4_exports/figure-body-2139.png",
+      "export_sha256": "7b01f6a8d48498d3f8d575bec56661e8794cc500ba18bc6b46e494f349d2946b",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [
+        {
+          "path": "H1_statistics_summary.json",
+          "sha256": "51f8d2f6f1aba2ee91c08d65088a388aa970dd68f104658996c591de0567645c"
+        }
+      ],
+      "status": "archived_results; no model rerun",
+      "command": "See original analysis scripts; exact historical plot generation not independently replayed",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "figure-body-2141",
+      "kind": "figure",
+      "caption": "مقایسه mAP@0.50:0.95 مدل‌ها در H1",
+      "export_file": "chapter4_exports/figure-body-2141.png",
+      "export_sha256": "808681190d02440190d683db2c8c8b41f5ff878fef3ee6406e2504b7a1095a09",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [
+        {
+          "path": "H1_statistics_summary.json",
+          "sha256": "51f8d2f6f1aba2ee91c08d65088a388aa970dd68f104658996c591de0567645c"
+        }
+      ],
+      "status": "archived_results; no model rerun",
+      "command": "See original analysis scripts; exact historical plot generation not independently replayed",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "table-body-2153",
+      "kind": "table",
+      "caption": "میانگین افت عملکرد(Degradation)مدل هادر ارزیابیH2",
+      "export_file": "chapter4_exports/table-body-2153.csv",
+      "export_sha256": "fba42d51e85be594a9e51dbd42278c10fcf110b248c063a1fe221ee1ac249e27",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [
+        {
+          "path": "per_image_degradation.csv",
+          "sha256": "15d46b585c72913e53275e1314552359f664ef2c96a979356b572eadc3ad278b"
+        },
+        {
+          "path": "H2_degradation_summary.csv",
+          "sha256": "0199da80040a7743700d54bed0051ce0a7d7bc9d808804c1193522bb0f78a2a8"
+        }
+      ],
+      "status": "archived_results; no model rerun",
+      "command": "See original analysis scripts; exact historical plot generation not independently replayed",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "figure-body-2156",
+      "kind": "figure",
+      "caption": "مقایسه میانگین Degradation مدل‌ها در H2",
+      "export_file": "chapter4_exports/figure-body-2156.png",
+      "export_sha256": "322ca8aeb67bfff264bb1999c9a5b91d56fd440ef94a21b3b1c398ef4548794d",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [
+        {
+          "path": "per_image_degradation.csv",
+          "sha256": "15d46b585c72913e53275e1314552359f664ef2c96a979356b572eadc3ad278b"
+        }
+      ],
+      "status": "archived_results; no model rerun",
+      "command": "See original analysis scripts; exact historical plot generation not independently replayed",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "table-body-2163",
+      "kind": "table",
+      "caption": "نتایج آزمون ویلکاکسون زوجی سطح تصویر برای مقایسه افت عملکرد مدل‌ها در ارزیابی H2 پس از اصلاح Holm",
+      "export_file": "chapter4_exports/table-body-2163.csv",
+      "export_sha256": "ccbf34341d4b6efcde9b0e675047eb6f03b8edbef44cd08c216959925f6d298c",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [
+        {
+          "path": "h2_inferential_results.csv",
+          "sha256": "72277102ee428104ec35af29ce8a9cadf1a50e84cd5731f2fa10f3f031c1eda6"
+        }
+      ],
+      "status": "recomputed CSV Wilcoxon/Holm",
+      "command": "python h2_signed_f1_analysis.py per_image_degradation.csv --out audit_validation/h2",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "table-body-2178",
+      "kind": "table",
+      "caption": "نتایج کلی ارزیابیH3ومقایسه افت عملکرد  مدل ها",
+      "export_file": "chapter4_exports/table-body-2178.csv",
+      "export_sha256": "9dac4f101a1c7a570294c0c189b6acae5f21910cebd0db9efaaf020bc3330fe9",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [
+        {
+          "path": "domain_shift_summary.csv",
+          "sha256": "467bf237083e0d2687868ebdbe4496e7b5ae2e4f87c8aeff64f60310bd190f70"
+        },
+        {
+          "path": "per_image_domain_shift.csv",
+          "sha256": "82e6eb54d8366fde7702970c7918f99a90bb82a3c403064370b740ea015be5b4"
+        }
+      ],
+      "status": "archived_results; no model rerun",
+      "command": "See original analysis scripts; exact historical plot generation not independently replayed",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "figure-body-2181",
+      "kind": "figure",
+      "caption": "مقایسه میانگین Degradation مدل هادرH3",
+      "export_file": "chapter4_exports/figure-body-2181.png",
+      "export_sha256": "6c08e1900f331bcf70139071d9ae9d4d5ef6ee12bcccb7929cab8e1840af80d0",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [
+        {
+          "path": "domain_shift_summary.csv",
+          "sha256": "467bf237083e0d2687868ebdbe4496e7b5ae2e4f87c8aeff64f60310bd190f70"
+        }
+      ],
+      "status": "archived_results; no model rerun",
+      "command": "See original analysis scripts; exact historical plot generation not independently replayed",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "figure-body-2187",
+      "kind": "figure",
+      "caption": "مقایسه میانگین Degradationمدل هادر controlled_synthetic_domain_shift",
+      "export_file": "chapter4_exports/figure-body-2187.png",
+      "export_sha256": "12dca2b63f399c73064dd77530e90b07ee1dfe55cc8e8e9b692fc826d351c176",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [
+        {
+          "path": "domain_shift_summary.csv",
+          "sha256": "467bf237083e0d2687868ebdbe4496e7b5ae2e4f87c8aeff64f60310bd190f70"
+        }
+      ],
+      "status": "archived_results; no model rerun",
+      "command": "See original analysis scripts; exact historical plot generation not independently replayed",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "table-body-2203",
+      "kind": "table",
+      "caption": "رتبه‌بندی تجمیعی مدل‌ها در مراحل H1 تا H3",
+      "export_file": "chapter4_exports/table-body-2203.csv",
+      "export_sha256": "00e6080b803aa6ef32ea33c7effff83d83a3347114b24b24472c35c2145b415b",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [
+        {
+          "path": "H1_descriptive_statistics.csv",
+          "sha256": "0851f588c21cee9ed058a7989e8ed2631846881fe7ed1821dba8eb764887aa00"
+        },
+        {
+          "path": "H2_degradation_summary.csv",
+          "sha256": "0199da80040a7743700d54bed0051ce0a7d7bc9d808804c1193522bb0f78a2a8"
+        },
+        {
+          "path": "domain_shift_summary.csv",
+          "sha256": "467bf237083e0d2687868ebdbe4496e7b5ae2e4f87c8aeff64f60310bd190f70"
+        }
+      ],
+      "status": "archived_results; no model rerun",
+      "command": "See original analysis scripts; exact historical plot generation not independently replayed",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "figure-body-2205",
+      "kind": "figure",
+      "caption": "پروفایل رتبه‌ای مدل‌ها در H1 تا H3 بر اساس نتایج بسته results2",
+      "export_file": "chapter4_exports/figure-body-2205.png",
+      "export_sha256": "34186b64567e34e71de6530705d2612dbd3ff9a016db420d9b62988b6768bddf",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [
+        {
+          "path": "H1_descriptive_statistics.csv",
+          "sha256": "0851f588c21cee9ed058a7989e8ed2631846881fe7ed1821dba8eb764887aa00"
+        },
+        {
+          "path": "H2_degradation_summary.csv",
+          "sha256": "0199da80040a7743700d54bed0051ce0a7d7bc9d808804c1193522bb0f78a2a8"
+        },
+        {
+          "path": "domain_shift_summary.csv",
+          "sha256": "467bf237083e0d2687868ebdbe4496e7b5ae2e4f87c8aeff64f60310bd190f70"
+        }
+      ],
+      "status": "archived_results; no model rerun",
+      "command": "See original analysis scripts; exact historical plot generation not independently replayed",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "table-body-2219",
+      "kind": "table",
+      "caption": "پیکربندی سازگارسازی مدل در مرحله H4",
+      "export_file": "chapter4_exports/table-body-2219.csv",
+      "export_sha256": "d20689386c0f18e9aef690ee49ccc71637b6be06410ebd3032733e76eca25512",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [
+        {
+          "path": "H4_args_historical.yaml",
+          "sha256": "918c43fe8c217300b4fbf1aabfd0ec7c21f8a5ba6b3f952721d749b603be053d"
+        },
+        {
+          "path": "hypothesis_tests/scripts/H4/config_h4.py",
+          "sha256": "a22642926ed205dcbebccfb1bc10aeaea29a2ed13406f588bf00794237e08aca"
+        }
+      ],
+      "status": "archived_results; no model rerun",
+      "command": "See original analysis scripts; exact historical plot generation not independently replayed",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "table-body-2225",
+      "kind": "table",
+      "caption": "مقایسه توصیفی F1 مبدأ در گزارش پیشین H4؛ بدون بازتولید مستقل",
+      "export_file": "chapter4_exports/table-body-2225.csv",
+      "export_sha256": "6aa748fa2a7c91e60e9a690acc673f961e8a3d546a6bf4db2820d87611246d66",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [],
+      "status": "historical report/figure only; raw paired H4 records and weights unavailable",
+      "command": "NOT REPRODUCIBLE from available raw evidence",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "figure-body-2227",
+      "kind": "figure",
+      "caption": "میانگین F1 مبدأ در گزارش پیشین H4؛ مقادیر توصیفی بازتولیدنشده",
+      "export_file": "chapter4_exports/figure-body-2227.png",
+      "export_sha256": "e369d78100f290aff82857e59350276e02a96eb35520f2d61948025194ab7248",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [],
+      "status": "historical report/figure only; raw paired H4 records and weights unavailable",
+      "command": "NOT REPRODUCIBLE from available raw evidence",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "figure-body-2231",
+      "kind": "figure",
+      "caption": "توزیع تغییرات F1 نقل‌شده از گزارش پیشین H4؛ بدون داده خام قابل بازبررسی",
+      "export_file": "chapter4_exports/figure-body-2231.png",
+      "export_sha256": "ddb7442dfabc302e20e0085a74685d64ebfead4bdd85641cfc30d72e768da8be",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [],
+      "status": "historical report/figure only; raw paired H4 records and weights unavailable",
+      "command": "NOT REPRODUCIBLE from available raw evidence",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "figure-body-2240",
+      "kind": "figure",
+      "caption": "روند معیارهای validation در طول آموزش adaptation H4",
+      "export_file": "chapter4_exports/figure-body-2240.png",
+      "export_sha256": "bd0cb5aa5ae407fc3443c3f6bdd0dfc450a0b7558d63b801e109b969989f1fbb",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [
+        {
+          "path": "H4_results_historical.csv",
+          "sha256": "22911e56de04bcd66c6b845dcbb38068008fba72948679ee369d63842a8d25b0"
+        }
+      ],
+      "status": "archived_results; no model rerun",
+      "command": "See original analysis scripts; exact historical plot generation not independently replayed",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "figure-body-2242",
+      "kind": "figure",
+      "caption": "ماتریس درهم‌ریختگی گزارش پیشین H4؛ بدون بازتولید استنتاج از وزن نهایی",
+      "export_file": "chapter4_exports/figure-body-2242.png",
+      "export_sha256": "10cc4245b9d0df48737d032ee9fef1d591232d1e98f5f1943c8c1c13cdcf5a03",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [],
+      "status": "historical report/figure only; raw paired H4 records and weights unavailable",
+      "command": "NOT REPRODUCIBLE from available raw evidence",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "table-body-2246",
+      "kind": "table",
+      "caption": "نقاط کلیدی لاگ اعتبارسنجی درمرحلهH4",
+      "export_file": "chapter4_exports/table-body-2246.csv",
+      "export_sha256": "2e35d9b14feec7c99ef6d9efddcb4f73755861ff5418512d54c70de0c672e13a",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [
+        {
+          "path": "H4_results_historical.csv",
+          "sha256": "22911e56de04bcd66c6b845dcbb38068008fba72948679ee369d63842a8d25b0"
+        }
+      ],
+      "status": "archived_results; no model rerun",
+      "command": "See original analysis scripts; exact historical plot generation not independently replayed",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "table-body-2253",
+      "kind": "table",
+      "caption": "جمع‌بندی عملکرد مدل‌ها در چهار مرحله پژوهش",
+      "export_file": "chapter4_exports/table-body-2253.csv",
+      "export_sha256": "605291afc55fef1b0f624be944dff3f33d790876355915bb76fd10e89000ca76",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [
+        {
+          "path": "H1_descriptive_statistics.csv",
+          "sha256": "0851f588c21cee9ed058a7989e8ed2631846881fe7ed1821dba8eb764887aa00"
+        },
+        {
+          "path": "H2_degradation_summary.csv",
+          "sha256": "0199da80040a7743700d54bed0051ce0a7d7bc9d808804c1193522bb0f78a2a8"
+        },
+        {
+          "path": "domain_shift_summary.csv",
+          "sha256": "467bf237083e0d2687868ebdbe4496e7b5ae2e4f87c8aeff64f60310bd190f70"
+        }
+      ],
+      "status": "archived_results; no model rerun",
+      "command": "See original analysis scripts; exact historical plot generation not independently replayed",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    },
+    {
+      "id": "table-body-2260",
+      "kind": "table",
+      "caption": "وضعیت نهایی فرضیه های پژوهش",
+      "export_file": "chapter4_exports/table-body-2260.csv",
+      "export_sha256": "69f4babd514b16aa3743ff412db26b635d75439a92edd0202c5f1cf043ab0739",
+      "export_method": "extracted unchanged from final thesis; extraction is not independent numerical validation",
+      "source_files": [
+        {
+          "path": "H1_statistics_summary.json",
+          "sha256": "51f8d2f6f1aba2ee91c08d65088a388aa970dd68f104658996c591de0567645c"
+        },
+        {
+          "path": "h2_inferential_results.csv",
+          "sha256": "72277102ee428104ec35af29ce8a9cadf1a50e84cd5731f2fa10f3f031c1eda6"
+        },
+        {
+          "path": "H3_model_comparison_statistics.csv",
+          "sha256": "18dc4a28c2efca6048389a2900184b847021b8308ff52569770eafbac8ff977b"
+        }
+      ],
+      "status": "archived_results; no model rerun",
+      "command": "See original analysis scripts; exact historical plot generation not independently replayed",
+      "sample_scope": "H1/H3: 2462 images; H2: 2462 images x 6 conditions; H4: reported source only",
+      "checkpoint_status": "binary weights unavailable; recorded YOLO best.pt / RT-DETR last.pt / RTMDet epoch146 are not independently verified",
+      "source_commit": "Original root evidence: 2bd7fb30082c7ff4c9c476e14bc656f9183e00da; new exports and corrections: the GitHub commit containing this publication archive"
+    }
+  ],
+  "complete_provenance": false,
+  "limitation": "Every Chapter 4 table and figure is indexed, but original generator/weights/raw H4 evidence remain incomplete. Exported CSV/image hashes establish identity, not experimental validity."
+}

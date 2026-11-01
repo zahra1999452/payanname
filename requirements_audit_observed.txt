@@ -1,0 +1,2 @@
+# Current audit unit tests only. NOT the historical training environment.
+numpy==2.5.1

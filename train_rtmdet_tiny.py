@@ -98,11 +98,10 @@ CONFIG_OUTPUT = WORK_DIR / "rtmdet_tiny_config.py"
 # OFFICIAL MMDET CONFIG
 # =============================================================================
 
-OFFICIAL_CONFIG = Path(
-    sys.prefix
-) / "Lib" / "site-packages" / "mmdet" / ".mim" / "configs" / "rtmdet" / (
-    "rtmdet_tiny_8xb32-300e_coco.py"
-)
+from audit_support import discover_rtmdet_config
+
+# Resolved on demand: explicit override or installed package, on Windows/Linux.
+OFFICIAL_CONFIG = None
 
 
 # =============================================================================
@@ -639,6 +638,8 @@ class TrainingProgressHook(Hook):
 # =============================================================================
 
 def build_config():
+
+    OFFICIAL_CONFIG = discover_rtmdet_config()
 
     header("BUILDING RTMDET-TINY CONFIG")
 

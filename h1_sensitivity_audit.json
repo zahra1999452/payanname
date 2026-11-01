@@ -1,0 +1,146 @@
+{
+  "input_sha256": "a6aaa37e286d38f44fac493e7ba103c82bf82228e0cc0a58043204c31d507107",
+  "n_records": 7386,
+  "n_paired_images": 2462,
+  "results": [
+    {
+      "model": "YOLOv8",
+      "n_all": 2462,
+      "n_gt_positive": 2330,
+      "n_gt_empty": 132,
+      "n_both_empty": 101,
+      "mean_f1_original": 0.7540205178938257,
+      "mean_f1_gt_positive": 0.7533899206242913,
+      "mean_f1_both_empty_zero": 0.7129969598109662
+    },
+    {
+      "model": "RT-DETR",
+      "n_all": 2462,
+      "n_gt_positive": 2330,
+      "n_gt_empty": 132,
+      "n_both_empty": 86,
+      "mean_f1_original": 0.689368849546457,
+      "mean_f1_gt_positive": 0.6915133508941533,
+      "mean_f1_both_empty_zero": 0.6544378990996659
+    },
+    {
+      "model": "RTMDet",
+      "n_all": 2462,
+      "n_gt_positive": 2330,
+      "n_gt_empty": 132,
+      "n_both_empty": 72,
+      "mean_f1_original": 0.6688068685044544,
+      "mean_f1_gt_positive": 0.6757950687802431,
+      "mean_f1_both_empty_zero": 0.6395623518513268
+    }
+  ],
+  "all_f1_checked_against_counts": true,
+  "gt_counts_identical_across_models": true,
+  "filename_proxy": {
+    "rule": "^(.+)_frame(\\d+)$",
+    "matched_images": 2222,
+    "unmatched_images": 240,
+    "prefix_count": 429,
+    "multi_frame_prefix_count": 347,
+    "min_group_size": 1,
+    "max_group_size": 52,
+    "group_size_counts": {
+      "1": 82,
+      "2": 87,
+      "3": 57,
+      "4": 44,
+      "5": 27,
+      "6": 34,
+      "7": 19,
+      "8": 14,
+      "9": 9,
+      "10": 10,
+      "11": 11,
+      "12": 5,
+      "13": 4,
+      "14": 2,
+      "15": 2,
+      "16": 2,
+      "17": 1,
+      "18": 1,
+      "19": 1,
+      "20": 2,
+      "21": 3,
+      "23": 2,
+      "24": 1,
+      "25": 1,
+      "27": 1,
+      "28": 2,
+      "30": 2,
+      "33": 1,
+      "51": 1,
+      "52": 1
+    },
+    "largest_groups": [
+      [
+        "obj1505",
+        52
+      ],
+      [
+        "obj1502",
+        51
+      ],
+      [
+        "bio0016",
+        33
+      ],
+      [
+        "bio0015",
+        30
+      ],
+      [
+        "obj0348",
+        30
+      ],
+      [
+        "bio0002",
+        28
+      ],
+      [
+        "vid_000285",
+        28
+      ],
+      [
+        "vid_000158",
+        27
+      ],
+      [
+        "bio0001",
+        25
+      ],
+      [
+        "obj1658",
+        24
+      ],
+      [
+        "obj0309",
+        23
+      ],
+      [
+        "vid_000331",
+        23
+      ]
+    ],
+    "unmatched_examples": [
+      "hawaii_1_16425_10635_22683",
+      "hawaii_1_2794_5604_1798",
+      "hawaii_1_2933_15947_12331",
+      "hawaii_1_3484_1603_9933",
+      "hawaii_1_6402_10262_20080",
+      "hawaii_1_6541_7090_5839",
+      "hawaii_1_8897_17590_8607",
+      "hawaii_2_1109_11291_10883",
+      "hawaii_2_1179_16434_7591",
+      "hawaii_2_1180_1029_6469",
+      "hawaii_2_1180_1653_6577",
+      "hawaii_2_1180_439_5366"
+    ]
+  },
+  "limitation": "Filename prefixes are provisional source proxies only. No verified video/source mapping or train/validation manifests and labels are available. No cluster inference or split-independence claim is made.",
+  "sensitivity_inference": "Descriptive only; original ranking compared. No new p-values were calculated."
+}

@@ -1,0 +1,4 @@
+﻿comparison,model,test,n,statistic,p_value,effect_size,effect_size_type,mean_degradation,ci95_low,ci95_high,holm_adjusted_p,alpha,significant_after_holm
+YOLOv8n: Source vs Target,YOLOv8n,Wilcoxon signed-rank,2462,66116.0,9.645439232773082e-51,0.31010367472410316,paired Cohen's dz,0.11733638835992553,0.1019056440665078,0.13314367834128782,1.9290878465546164e-50,0.05,True
+RT-DETR-L: Source vs Target,RT-DETR-L,Wilcoxon signed-rank,2462,235272.0,2.678462165891673e-43,0.27962507936244463,paired Cohen's dz,0.07648316076313859,0.058878855758904065,0.09389369712792017,2.678462165891673e-43,0.05,True
+RTMDet-Tiny: Source vs Target,RTMDet-Tiny,Wilcoxon signed-rank,2462,221288.5,7.071670918915182e-57,0.3212206848242165,paired Cohen's dz,0.10526022985697796,0.08839322695490139,0.12258732525692101,2.1215012756745546e-56,0.05,True

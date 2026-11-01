@@ -8,6 +8,10 @@ UNIFIED TRAINER FOR YOLOv8 / RT-DETR / RTMDet
 
 import os
 import json
+if __package__:
+    from .audit_support import read_training_history, json_native
+else:
+    from audit_support import read_training_history, json_native
 import cv2
 import numpy as np
 from pathlib import Path
@@ -135,20 +139,16 @@ class UnifiedTrainer:
                 amp=False,
                 resume=resume,   # ← پارامتر resume
             )
-            # ذخیره تاریخچه
-            self.history["train_loss"] = results.history.get("train/box_loss", [])
-            self.history["val_loss"] = results.history.get("val/box_loss", [])
-            self.history["mAP50"] = results.history.get("metrics/mAP50(B)", [])
-            self.history["mAP50-95"] = results.history.get("metrics/mAP50-95(B)", [])
-            self.history["precision"] = results.history.get("metrics/precision(B)", [])
-            self.history["recall"] = results.history.get("metrics/recall(B)", [])
+            # Read the actual run directory selected by the trainer.
+            csv_path = Path(model.trainer.csv)
+            self.history = read_training_history(csv_path)
 
         else:
             raise NotImplementedError("Use the dedicated non-YOLO training scripts.")
 
         # ذخیره تاریخچه
         with open(self.base_dir / "logs" / "training_history.json", "w") as f:
-            json.dump(self.history, f, indent=2)
+            json.dump(json_native(self.history), f, indent=2, allow_nan=False)
 
         self._plot_history()
         print(f"\n✅ آموزش {self.model_name} کامل شد.")
@@ -219,7 +219,7 @@ class UnifiedTrainer:
             raise NotImplementedError("Use the dedicated non-YOLO evaluation scripts.")
 
         with open(self.base_dir / "metrics" / "eval_metrics.json", "w") as f:
-            json.dump(metrics, f, indent=2)
+            json.dump(json_native(metrics), f, indent=2, allow_nan=False)
 
         self._save_test_images(model, test_dir, num_samples)
         self._generate_heatmaps(model, test_dir, 10)

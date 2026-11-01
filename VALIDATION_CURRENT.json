@@ -1,0 +1,254 @@
+{
+  "started_utc": "2026-11-01T14:49:59.409245+00:00",
+  "training_performed": false,
+  "inference_performed": false,
+  "integration_passed": false,
+  "syntax": [
+    {
+      "path": "__init__.py",
+      "status": "pass"
+    },
+    {
+      "path": "analyze_h1_sensitivity.py",
+      "status": "pass"
+    },
+    {
+      "path": "audit_support.py",
+      "status": "pass"
+    },
+    {
+      "path": "check_rtdetr.py",
+      "status": "pass"
+    },
+    {
+      "path": "config.py",
+      "status": "pass"
+    },
+    {
+      "path": "config_snapshot\\configs\\_base_\\datasets\\coco_detection.py",
+      "status": "pass"
+    },
+    {
+      "path": "config_snapshot\\configs\\_base_\\default_runtime.py",
+      "status": "pass"
+    },
+    {
+      "path": "config_snapshot\\configs\\_base_\\schedules\\schedule_1x.py",
+      "status": "pass"
+    },
+    {
+      "path": "config_snapshot\\configs\\rtmdet\\rtmdet_l_8xb32-300e_coco.py",
+      "status": "pass"
+    },
+    {
+      "path": "config_snapshot\\configs\\rtmdet\\rtmdet_s_8xb32-300e_coco.py",
+      "status": "pass"
+    },
+    {
+      "path": "config_snapshot\\configs\\rtmdet\\rtmdet_tiny_8xb32-300e_coco.py",
+      "status": "pass"
+    },
+    {
+      "path": "config_snapshot\\configs\\rtmdet\\rtmdet_tta.py",
+      "status": "pass"
+    },
+    {
+      "path": "h2_signed_f1_analysis.py",
+      "status": "pass"
+    },
+    {
+      "path": "h2_wilcoxon_holm_verified_v2.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\configs\\config.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\common\\audit_test_split.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\common\\io_utils.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\H1\\H1_controlled_baseline_map_cached.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\H1\\H1_rerun.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\H1\\run_h1_complete.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\H1\\run_h1_statistics.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\H2\\H2_robustness_cached.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\H2\\make_corruptions.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\H2\\run_h2_complete.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\H2\\run_h2_statistics.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\H3\\build_H3_target_dataset.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\H3\\check_target_domain.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\H3\\H3_domain_shift_complete.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\H3\\make_h3_domain_shift.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\H3\\run_h3_all_conditions.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\H3\\run_h3_complete.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\H3\\run_h3_statistics.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\H4\\config_h4.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\H4\\run_h4_complete.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\H4\\run_h4_end_to_end.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\H4\\run_h4_statistics.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\make_chapter4_tables.py",
+      "status": "pass"
+    },
+    {
+      "path": "hypothesis_tests\\scripts\\select_h4_model.py",
+      "status": "pass"
+    },
+    {
+      "path": "make_signed_h2_plot.py",
+      "status": "pass"
+    },
+    {
+      "path": "rtdetr_train.py",
+      "status": "pass"
+    },
+    {
+      "path": "rtmdet_train.py",
+      "status": "pass"
+    },
+    {
+      "path": "run_rtdetr.py",
+      "status": "pass"
+    },
+    {
+      "path": "test.py",
+      "status": "pass"
+    },
+    {
+      "path": "test_audit_fixes.py",
+      "status": "pass"
+    },
+    {
+      "path": "train_rtdetr_l_6gb.py",
+      "status": "pass"
+    },
+    {
+      "path": "train_rtmdet_tiny.py",
+      "status": "pass"
+    },
+    {
+      "path": "train_yolov8.py",
+      "status": "pass"
+    },
+    {
+      "path": "unified_trainer.py",
+      "status": "pass"
+    },
+    {
+      "path": "validate_audit.py",
+      "status": "pass"
+    },
+    {
+      "path": "yolov8_train.py",
+      "status": "pass"
+    }
+  ],
+  "steps": [
+    {
+      "name": "unit_contracts",
+      "exit_code": 0,
+      "log": "audit_validation/unit_contracts.log"
+    },
+    {
+      "name": "H2_signed_figure",
+      "exit_code": 0,
+      "log": "audit_validation/H2_signed_figure.log"
+    },
+    {
+      "name": "H1_sensitivity",
+      "exit_code": 0,
+      "log": "audit_validation/H1_sensitivity.log"
+    },
+    {
+      "name": "H2_signed_reanalysis",
+      "exit_code": 0,
+      "log": "audit_validation/H2_signed_reanalysis.log"
+    }
+  ],
+  "imports": [
+    {
+      "module": "unified_trainer",
+      "exit_code": 1,
+      "passed": false,
+      "log": "audit_validation/import_unified_trainer.log"
+    },
+    {
+      "module": "train_rtdetr_l_6gb",
+      "exit_code": 1,
+      "passed": false,
+      "log": "audit_validation/import_train_rtdetr_l_6gb.log"
+    },
+    {
+      "module": "train_rtmdet_tiny",
+      "exit_code": 1,
+      "passed": false,
+      "log": "audit_validation/import_train_rtmdet_tiny.log"
+    }
+  ],
+  "h2_six_rows_exact_match": true,
+  "h2_output_sha256": "72277102ee428104ec35af29ce8a9cadf1a50e84cd5731f2fa10f3f031c1eda6",
+  "completed_utc": "2026-11-01T14:50:02.617440+00:00",
+  "static_and_csv_passed": true
+}

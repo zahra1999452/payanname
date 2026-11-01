@@ -1,0 +1,19 @@
+{
+  "base_commit": "2bd7fb30082c7ff4c9c476e14bc656f9183e00da",
+  "publication_commit": "The GitHub commit containing this file; no self-referential hash",
+  "excluded": [
+    "*.docx",
+    "*.pptx",
+    "*.pyc",
+    "__pycache__"
+  ],
+  "historical_training_reproduced": false,
+  "model_integration_passed": false,
+  "tracked_pyc_removal_requested": [
+    "__init__.cpython-313.pyc",
+    "rtdetr_train.cpython-313.pyc",
+    "rtmdet_train.cpython-313.pyc",
+    "unified_trainer.cpython-313.pyc",
+    "yolov8_train.cpython-313.pyc"
+  ]
+}

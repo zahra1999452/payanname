@@ -37,13 +37,14 @@
 # import sys
 # import time
 # import argparse
+import os
 # import platform
 # import multiprocessing as mp
 # import os
 from pathlib import Path
 
 # import torch
-# from ultralytics import YOLO
+# from ultralytics import RTDETR
 
 
 # # =============================================================================
@@ -435,7 +436,7 @@ from pathlib import Path
 
 #     print()
 
-#     model = YOLO(str(MODEL_PATH))
+#     model = RTDETR(str(MODEL_PATH))
 
 #     print("OK Model loaded successfully.")
 
@@ -854,7 +855,7 @@ import argparse
 import sys
 import torch
 
-from ultralytics import YOLO
+from ultralytics import RTDETR
 
 
 # =============================================================================
@@ -1059,11 +1060,10 @@ def show_checkpoint_info():
     # تلاش برای بررسی checkpoint
     try:
 
-        checkpoint = torch.load(
-            LAST_CHECKPOINT,
-            map_location="cpu",
-            weights_only=False
-        )
+        # Do not unpickle a checkpoint merely to display metadata.
+        # Historical epoch/optimizer metadata remain unverified.
+        checkpoint = {}
+        print("Checkpoint metadata inspection skipped; use trusted training logs.")
 
         if isinstance(checkpoint, dict):
 
@@ -1145,7 +1145,7 @@ def train_model(
         print("5% Dataset")
         print("برای تست Pipeline")
 
-        model = YOLO(
+        model = RTDETR(
             str(MODEL_PATH)
         )
 
@@ -1276,7 +1276,7 @@ def train_model(
         # برای Resume واقعی باید last.pt لود شود.
         # ---------------------------------------------------------------------
 
-        model = YOLO(
+        model = RTDETR(
             str(LAST_CHECKPOINT)
         )
 
@@ -1366,7 +1366,7 @@ def train_model(
 
     print("=" * 80)
 
-    model = YOLO(
+    model = RTDETR(
         str(MODEL_PATH)
     )
 

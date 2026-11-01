@@ -1,0 +1,16 @@
+{
+  "scope": "Observed audit environment only; NOT historical training lock",
+  "python": "3.12.13 (main, Jul 18 2026, 17:08:38) [MSC v.1944 64 bit (AMD64)]",
+  "packages": {
+    "numpy": "2.5.1",
+    "pandas": null,
+    "scipy": null,
+    "torch": null,
+    "torchvision": null,
+    "ultralytics": null,
+    "mmcv": null,
+    "mmengine": null,
+    "mmdet": null,
+    "opencv-python": null
+  }
+}
