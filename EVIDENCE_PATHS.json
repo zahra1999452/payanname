@@ -1,0 +1,17 @@
+{
+  "H1_descriptive_statistics.csv": "hypothesis_tests/results2/H1/H1_descriptive_statistics.csv",
+  "H1_statistics_summary.json": "hypothesis_tests/results2/H1/H1_statistics_summary.json",
+  "per_image_metrics.csv": "hypothesis_tests/results2/H1/per_image_metrics.csv",
+  "H2_degradation_summary.csv": "hypothesis_tests/results2/H2/H2_degradation_summary.csv",
+  "per_image_degradation.csv": "hypothesis_tests/results2/H2/per_image_degradation.csv",
+  "H2_run_configuration.json": "hypothesis_tests/results2/H2/H2_run_configuration.json",
+  "domain_shift_summary.csv": "hypothesis_tests/results2/H3/domain_shift_summary.csv",
+  "per_image_domain_shift.csv": "hypothesis_tests/results2/H3/per_image_domain_shift.csv",
+  "bootstrap_results.csv": "hypothesis_tests/results2/H3/bootstrap_results.csv",
+  "H3_run_configuration.json": "hypothesis_tests/results2/H3/H3_run_configuration.json",
+  "H3_target_manifest.csv": "hypothesis_tests/results2/H3/target_dataset/manifest.csv",
+  "H1_mAP0.50.png": "hypothesis_tests/results2/plots1/H1_mAP0.50.png",
+  "H1_mAP0.50_0.95.png": "hypothesis_tests/results2/plots1/H1_mAP0.50_0.95.png",
+  "h2_inferential_results.csv": "h2_output/h2_inferential_results.csv",
+  "run_manifest.json": "h2_output/run_manifest.json"
+}

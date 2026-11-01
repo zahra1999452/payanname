@@ -70,14 +70,9 @@ register_all_modules(init_default_scope=True)
 # PATHS
 # =============================================================================
 
-BASE_DIR = Path(
-    r"E:\rename\yolo_work_out\resrcher\marine_debris_detection"
-)
+BASE_DIR = Path(os.environ.get("MARINE_PROJECT_ROOT", str(Path(__file__).resolve().parent)))
 
-DATASET_ROOT = Path(
-    r"E:\rename\yolo_work_out\resrcher\YOLO_DATASETS"
-    r"\trashcan_trash_icra19_AUGMENTED_MINOR_ONLY_V6_2_REPAIRED_VALIDATED"
-)
+DATASET_ROOT = Path(os.environ.get("MARINE_DATASET_ROOT", str(BASE_DIR / "data")))
 
 COCO_DIR = DATASET_ROOT / "coco_annotations"
 

@@ -39,7 +39,8 @@
 # import argparse
 # import platform
 # import multiprocessing as mp
-# from pathlib import Path
+# import os
+from pathlib import Path
 
 # import torch
 # from ultralytics import YOLO
@@ -860,14 +861,9 @@ from ultralytics import YOLO
 # PATHS
 # =============================================================================
 
-BASE_DIR = Path(
-    r"E:\rename\yolo_work_out\resrcher\marine_debris_detection"
-)
+BASE_DIR = Path(os.environ.get("MARINE_PROJECT_ROOT", str(Path(__file__).resolve().parent)))
 
-DATASET_ROOT = Path(
-    r"E:\rename\yolo_work_out\resrcher\YOLO_DATASETS"
-    r"\trashcan_trash_icra19_AUGMENTED_MINOR_ONLY_V6_2_REPAIRED_VALIDATED"
-)
+DATASET_ROOT = Path(os.environ.get("MARINE_DATASET_ROOT", str(BASE_DIR / "data")))
 
 DATA_YAML = DATASET_ROOT / "data.yaml"
 

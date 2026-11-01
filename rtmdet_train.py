@@ -1,3 +1,4 @@
+# Legacy wrapper: synthetic history/metrics removed; entry points disabled.
 # -*- coding: utf-8 -*-
 """
 ====================================================================================================
@@ -26,21 +27,11 @@ from config import TRAIN_CONFIG, CLASSES, RESULTS_ROOT
 
 
 class RTMDetTrainer:
-    def __init__(self, data_yaml, model_name="RTMDet", model_size="l", effective_batch_size=32):
-        """
-        Args:
-            data_yaml: مسیر فایل data.yaml (برای RTMDet به فرمت COCO یا YOLO تبدیل می‌شود)
-            model_name: نام مدل برای ذخیره‌سازی
-            model_size: اندازه مدل ("tiny", "s", "m", "l", "x") - پیش‌فرض "l"
-            effective_batch_size: اندازه دسته مؤثر نهایی (هدف) - با gradient accumulation
-        """
-        self.data_yaml = str(data_yaml)
-        self.model_name = model_name
-        self.model_size = model_size
-        self.effective_batch_size = effective_batch_size
-        self.base_dir = RESULTS_ROOT / model_name
-        self._create_dirs()
-        self.history = defaultdict(list)
+    def __init__(self, *args, **kwargs):
+        raise NotImplementedError(
+            "Legacy RTMDet wrapper is disabled: its former metrics were examples. "
+            "Use train_rtmdet_tiny.py for real training/evaluation."
+        )
 
     def _create_dirs(self):
         """ایجاد پوشه‌های خروجی"""
@@ -209,50 +200,7 @@ device = '{TRAIN_CONFIG.get('device', 'cuda')}'
         return config_path
 
     def train(self):
-        """آموزش RTMDet با تنظیمات پروپوزال"""
-        print(f"\n{'='*60}")
-        print(f"🚀 آموزش {self.model_name} (RTMDet-{self.model_size})")
-        print(f"   اندازه دسته مؤثر: {self.effective_batch_size}")
-        print(f"{'='*60}")
-
-        # تولید کانفیگ
-        config_path = self._generate_config_file()
-        print(f"📄 فایل کانفیگ در: {config_path}")
-
-        print("\n⚠️ برای RTMDet از MMDetection استفاده کنید:")
-        print("   https://github.com/open-mmlab/mmdetection")
-        print("\nمراحل پیشنهادی برای آموزش:")
-        print("   1. pip install mmengine mmdet")
-        print("   2. git clone https://github.com/open-mmlab/mmdetection")
-        print("   3. cd mmdetection")
-        print("   4. داده‌های خود را به فرمت COCO (JSON) تبدیل کنید")
-        print("   5. فایل کانفیگ تولید شده را در مسیر mmdetection/configs/rtmdet/ قرار دهید")
-        print("   6. python tools/train.py", config_path)
-        print("\n🔍 پس از آموزش، چک‌پوینت‌های هر epoch در پوشه checkpoints ذخیره می‌شوند.")
-        print("   نتایج اعتبارسنجی هر ۵ epoch در لاگ قابل مشاهده است.")
-
-        # برای نمایش، یک تاریخچه ساختگی با روند واقع‌گرایانه تولید می‌کنیم
-        epochs = TRAIN_CONFIG.get('epochs', 150)
-        import math
-        self.history["train_loss"] = [0.7 * math.exp(-i/55) + 0.08 for i in range(epochs)]
-        self.history["val_loss"] = [0.8 * math.exp(-i/50) + 0.12 for i in range(epochs)]
-        self.history["mAP50"] = [0.15 + 0.75 * (1 - math.exp(-i/38)) for i in range(epochs)]
-        self.history["mAP50-95"] = [0.08 + 0.60 * (1 - math.exp(-i/42)) for i in range(epochs)]
-        self.history["precision"] = [0.2 + 0.70 * (1 - math.exp(-i/35)) for i in range(epochs)]
-        self.history["recall"] = [0.15 + 0.65 * (1 - math.exp(-i/40)) for i in range(epochs)]
-
-        # ذخیره تاریخچه (برای نمودار)
-        hist_path = self.base_dir / "logs" / "training_history.json"
-        with open(hist_path, "w") as f:
-            json.dump(self.history, f, indent=2)
-
-        # رسم نمودارها
-        self._plot_history()
-
-        print(f"\n✅ فرآیند آماده‌سازی آموزش {self.model_name} کامل شد.")
-        print(f"📁 نتایج در {self.base_dir}")
-        print("🔧 برای اجرای واقعی، دستورات بالا را دنبال کنید.")
-        return None, None
+        raise NotImplementedError("Legacy demo disabled; use train_rtmdet_tiny.py.")
 
     def _plot_history(self):
         """نمودارهای آموزش"""
@@ -304,31 +252,8 @@ device = '{TRAIN_CONFIG.get('device', 'cuda')}'
         plt.savefig(self.base_dir / "logs" / "training_history.png", dpi=150)
         plt.close()
 
-    def evaluate(self, model_path, test_dir, num_samples=20):
-        """ارزیابی مدل روی تصاویر تست (طبق پروپوزال)"""
-        print(f"\n📊 ارزیابی {self.model_name} روی داده‌های تست...")
-        # در صورت وجود مدل واقعی، ارزیابی انجام شود
-        # برای اینجا، یک ارزیابی ساختگی با معیارهای منطقی
-        metrics = {
-            "mAP50": 0.52,
-            "mAP50-95": 0.38,
-            "precision": 0.58,
-            "recall": 0.53,
-            "f1": 0.55,
-            "FPS": 32,
-            "Latency": 30,  # میلی‌ثانیه
-        }
-
-        with open(self.base_dir / "metrics" / "eval_metrics.json", "w") as f:
-            json.dump(metrics, f, indent=2)
-
-        print("📈 نتایج ارزیابی (مقادیر نمونه):")
-        for k, v in metrics.items():
-            print(f"   {k}: {v}")
-
-        # ذخیره تصاویر تست (در صورت وجود مدل و تصاویر)
-        self._save_test_images(model_path, test_dir, num_samples)
-        return metrics
+    def evaluate(self, *args, **kwargs):
+        raise NotImplementedError("Legacy demo disabled; use train_rtmdet_tiny.py --test.")
 
     def _save_test_images(self, model_path, test_dir, num_samples=20):
         """ذخیره تصاویر تست با پیش‌بینی (در صورت وجود مدل)"""

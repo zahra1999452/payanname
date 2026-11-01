@@ -1,0 +1,54 @@
+{
+    "experiment": "H3 Domain-Shift Robustness",
+    "condition_name": "uav_coastal_domain_shift",
+    "condition_type": "real_domain_shift",
+    "model_names": [
+        "YOLOv8n",
+        "RT-DETR-L",
+        "RTMDet-Tiny"
+    ],
+    "source_images": "E:\\rename\\yolo_work_out\\resrcher\\YOLO_DATASETS\\trashcan_trash_icra19_AUGMENTED_MINOR_ONLY_V6_2_REPAIRED_VALIDATED\\images\\test",
+    "source_labels": "E:\\rename\\yolo_work_out\\resrcher\\YOLO_DATASETS\\trashcan_trash_icra19_AUGMENTED_MINOR_ONLY_V6_2_REPAIRED_VALIDATED\\labels\\test",
+    "target_images": "E:\\rename\\yolo_work_out\\resrcher\\marine_debris_detection\\hypothesis_tests\\results2\\H3\\target_dataset\\images\\test",
+    "target_labels": "E:\\rename\\yolo_work_out\\resrcher\\marine_debris_detection\\hypothesis_tests\\results2\\H3\\target_dataset\\labels\\test",
+    "checkpoints": {
+        "YOLOv8n": "E:\\rename\\yolo_work_out\\resrcher\\yolo_train\\results\\yolov8n\\checkpoints\\yolov8\\weights\\best.pt",
+        "RT-DETR-L": "E:\\rename\\yolo_work_out\\resrcher\\marine_debris_detection\\runs\\rtdetr\\rtdetr_l_640_6gb_diskcache\\weights\\last.pt",
+        "RTMDet-Tiny": "E:\\rename\\yolo_work_out\\resrcher\\marine_debris_detection\\runs\\rtmdet\\rtmdet_tiny_640_6gb\\best_coco_bbox_mAP_epoch_146.pth"
+    },
+    "rtmdet_config": "E:\\rename\\yolo_work_out\\resrcher\\marine_debris_detection\\runs\\rtmdet\\rtmdet_tiny_640_6gb\\rtmdet_tiny_marine_debris_config.py",
+    "image_size": 640,
+    "confidence_threshold": 0.25,
+    "iou_threshold": 0.5,
+    "device": "cuda:0",
+    "seed": 42,
+    "bootstrap_iterations": 10000,
+    "requested_pairing_mode": "auto",
+    "effective_pairing_mode": "paired",
+    "n_source_images": 2462,
+    "n_target_images": 2462,
+    "n_common_image_ids": 2462,
+    "statistical_tests": [
+        "Wilcoxon signed-rank",
+        "Friedman test",
+        "Pairwise Wilcoxon",
+        "Holm correction",
+        "Paired Cohen's dz",
+        "Bootstrap 95% CI",
+        "Kendall's W"
+    ],
+    "degradation_formula": "(source_f1 - target_f1) / abs(source_f1)",
+    "retention_formula": "target_f1 / source_f1",
+    "evaluation_note": "Test/evaluation labels are used only for evaluation and are not used for model training or checkpoint selection.",
+    "environment": {
+        "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+        "platform": "Windows-10-10.0.19044-SP0",
+        "python_executable": "E:\\rename\\yolo_work_out\\resrcher\\venvs\\rtmdet\\Scripts\\python.exe",
+        "torch_version": "2.1.0+cu121",
+        "cuda_available": true,
+        "cuda_version": "12.1",
+        "gpu_name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+        "ultralytics_version": "8.4.147",
+        "mmdetection_version": "3.3.0"
+    }
+}

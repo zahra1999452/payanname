@@ -1,0 +1,31 @@
+{
+  "cache_version": "H2_CACHE_V3_IMAGE_ID_SAFE",
+  "test_images": "E:\\rename\\yolo_work_out\\resrcher\\YOLO_DATASETS\\trashcan_trash_icra19_AUGMENTED_MINOR_ONLY_V6_2_REPAIRED_VALIDATED\\images\\test",
+  "test_labels": "E:\\rename\\yolo_work_out\\resrcher\\YOLO_DATASETS\\trashcan_trash_icra19_AUGMENTED_MINOR_ONLY_V6_2_REPAIRED_VALIDATED\\labels\\test",
+  "corruption_root": "E:\\rename\\yolo_work_out\\resrcher\\marine_debris_detection\\hypothesis_tests\\data\\corruption",
+  "models": {
+    "YOLOv8": "E:\\rename\\yolo_work_out\\resrcher\\yolo_train\\results\\yolov8n\\checkpoints\\yolov8\\weights\\best.pt",
+    "RT-DETR": "E:\\rename\\yolo_work_out\\resrcher\\marine_debris_detection\\runs\\rtdetr\\rtdetr_l_640_6gb_diskcache\\weights\\last.pt",
+    "RTMDet": "E:\\rename\\yolo_work_out\\resrcher\\marine_debris_detection\\runs\\rtmdet\\rtmdet_tiny_640_6gb\\best_coco_bbox_mAP_epoch_146.pth",
+    "RTMDet_config": "E:\\rename\\yolo_work_out\\resrcher\\marine_debris_detection\\runs\\rtmdet\\rtmdet_tiny_640_6gb\\rtmdet_tiny_marine_debris_config.py"
+  },
+  "output": "E:\\rename\\yolo_work_out\\resrcher\\marine_debris_detection\\hypothesis_tests\\results2\\H2",
+  "imgsz": 640,
+  "conf": 0.25,
+  "iou": 0.5,
+  "device": "cuda:0",
+  "models_evaluated": [
+    "YOLOv8",
+    "RT-DETR",
+    "RTMDet"
+  ],
+  "corruptions_evaluated": [
+    "brightness",
+    "contrast",
+    "gaussian_noise",
+    "gaussian_blur",
+    "motion_blur",
+    "jpeg_compression"
+  ],
+  "limit": null
+}

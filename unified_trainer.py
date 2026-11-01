@@ -17,7 +17,10 @@ from tqdm import tqdm
 import torch
 from ultralytics import YOLO
 
-from config import TRAIN_CONFIG, CLASSES, RESULTS_ROOT
+if __package__:
+    from .config import TRAIN_CONFIG, CLASSES, RESULTS_ROOT
+else:
+    from config import TRAIN_CONFIG, CLASSES, RESULTS_ROOT
 
 
 class UnifiedTrainer:
@@ -31,6 +34,12 @@ class UnifiedTrainer:
         """
         self.data_yaml = str(data_yaml)
         self.model_type = model_type.lower()
+        # SUPPORTED_YOLO_ONLY: legacy non-YOLO branches must never create results.
+        if self.model_type != "yolov8":
+            raise NotImplementedError(
+                "Legacy trainer supports YOLOv8 only. Use train_rtdetr_l_6gb.py "
+                "for RT-DETR-L or train_rtmdet_tiny.py for RTMDet-Tiny."
+            )
         self.model_size = model_size
         self.effective_batch_size = effective_batch_size
         self.model_name = f"{model_type}{model_size}"
@@ -135,16 +144,7 @@ class UnifiedTrainer:
             self.history["recall"] = results.history.get("metrics/recall(B)", [])
 
         else:
-            # راهنمای آموزش برای RT-DETR و RTMDet
-            print(f"\n⚠️ برای {self.model_type.upper()} از مخزن رسمی استفاده کنید.")
-            print(f"   https://github.com/{'lyuwenyu/RT-DETR' if self.model_type=='rtdetr' else 'open-mmlab/mmdetection'}")
-            # تاریخچه ساختگی
-            import math
-            epochs = TRAIN_CONFIG.get("epochs", 150)
-            self.history["train_loss"] = [0.8 * math.exp(-i/60) + 0.1 for i in range(epochs)]
-            self.history["val_loss"] = [0.9 * math.exp(-i/50) + 0.15 for i in range(epochs)]
-            self.history["mAP50"] = [0.1 + 0.7 * (1 - math.exp(-i/40)) for i in range(epochs)]
-            self.history["mAP50-95"] = [0.05 + 0.55 * (1 - math.exp(-i/45)) for i in range(epochs)]
+            raise NotImplementedError("Use the dedicated non-YOLO training scripts.")
 
         # ذخیره تاریخچه
         with open(self.base_dir / "logs" / "training_history.json", "w") as f:
@@ -216,14 +216,7 @@ class UnifiedTrainer:
                 "f1": results.box.f1,
             }
         else:
-            metrics = {
-                "mAP50": 0.48 if self.model_type == "rtdetr" else 0.52,
-                "mAP50-95": 0.35 if self.model_type == "rtdetr" else 0.38,
-                "precision": 0.54 if self.model_type == "rtdetr" else 0.58,
-                "recall": 0.49 if self.model_type == "rtdetr" else 0.53,
-                "f1": 0.51 if self.model_type == "rtdetr" else 0.55,
-                "FPS": 25 if self.model_type == "rtdetr" else 32,
-            }
+            raise NotImplementedError("Use the dedicated non-YOLO evaluation scripts.")
 
         with open(self.base_dir / "metrics" / "eval_metrics.json", "w") as f:
             json.dump(metrics, f, indent=2)
@@ -328,21 +321,3 @@ class UnifiedTrainer:
                 cv2.imwrite(str(save_path), cv2.cvtColor(cam_image, cv2.COLOR_RGB2BGR))
             except Exception as e:
                 print(f"⚠️ خطا در Heatmap برای {img_path.name}: {e}")
-
-
-# UNIFIED TRAINER FOR YOLOv8 / RT-DETR / RTMDet
-# ... (همه importها و توابع قبلی بدون تغییر)
-
-# بخش train() - جایگزین از خط ۱۳۷ به بعد
-else:
-    raise NotImplementedError(
-        "Non-YOLO models (RT-DETR / RTMDet) are not supported in UnifiedTrainer. "
-        "Please use the dedicated scripts: train_rtdetr_l_6gb.py or train_rtmdet_tiny.py"
-    )
-
-# بخش evaluate() - جایگزین بخش else
-else:
-    raise NotImplementedError(
-        "Evaluation for non-YOLO models is not supported in UnifiedTrainer. "
-        "Use the dedicated evaluation scripts."
-    )

@@ -1,7 +1,13 @@
-# -*- coding: utf-8 -*-
+"""Training source package. Dedicated RT-DETR/RTMDet scripts have their own CLI.
 
-from .yolov8_train import YOLOv8Trainer
-from .rtdetr_train import RTDETRTrainer
-from .rtmdet_train import RTMDetTrainer
+Importing the package alone does not import GPU libraries or start training.
+"""
+from importlib import import_module
 
-__all__ = ["YOLOv8Trainer", "RTDETRTrainer", "RTMDetTrainer"]
+__all__ = ["UnifiedTrainer", "YOLOv8Trainer"]
+
+def __getattr__(name):
+    if name in __all__:
+        module = import_module(".unified_trainer", __name__)
+        return module.UnifiedTrainer
+    raise AttributeError(name)

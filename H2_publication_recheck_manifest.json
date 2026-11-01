@@ -1,0 +1,17 @@
+{
+  "version": "H2_absolute_F1_verified_v2_timestamped",
+  "python": "3.12.13",
+  "started_utc": "2026-11-01T08:17:09+00:00",
+  "completed_utc": "2026-11-01T08:17:10+00:00",
+  "input_sha256": "15d46b585c72913e53275e1314552359f664ef2c96a979356b572eadc3ad278b",
+  "script_sha256": "f9461dbcfcee9b82d4f84ff872514e4433c491b77edd0e2ef17f32d24a7e76c9",
+  "metric": "clean_f1-corrupted_f1 or absolute_f1_drop; never degradation",
+  "paired_difference": "D_second-D_first",
+  "decimals": 12,
+  "primary_n": 2462,
+  "pooled_n": 14772,
+  "method": "two-sided asymptotic normal; tie correction; wilcox; no continuity correction",
+  "zero_policy": "round differences to 12 decimals; exclude zeros from ranks",
+  "p_adjustment": "Holm separately within each three-pair family",
+  "limitation": "image independence; pooled conditions are dependent"
+}

@@ -1,0 +1,220 @@
+{
+  "prepared_date": "2026-11-01",
+  "base_commit": "4b9908084d575b6a9d33028db6cf257d772a246e",
+  "scope": "Supervisor corrections; static checks and H2 rerun; no GPU training/inference",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 65,
+      "sha256": "1110bfc578122518a9711493f18d30156783d63d0253ef536fadf03b8b56e4fc"
+    },
+    {
+      "path": "__init__.py",
+      "bytes": 423,
+      "sha256": "153dc285d0b5583728c88c35b38226adc6cc2b3f7c3ba78b197d02a13fc0f923"
+    },
+    {
+      "path": "analysis_source_and_evidence.zip",
+      "bytes": 2194297,
+      "sha256": "9d6a56e2f33bd6a637ab76e6e39c40b21cf3d14e019cae30f3542232bf5a17ff"
+    },
+    {
+      "path": "bootstrap_results.csv",
+      "bytes": 554,
+      "sha256": "0102932a9cdbb7ddd7af0848b150554cfbbc3087345527b9568195f28a288179"
+    },
+    {
+      "path": "check_rtdetr.py",
+      "bytes": 11313,
+      "sha256": "cbb976455f752a62de6c22851b27e3f68d965aa44709921cc0439dc2c6c137ba"
+    },
+    {
+      "path": "config.py",
+      "bytes": 939,
+      "sha256": "7a0c5b541d78bfd382da619995e0efb851f2c8462f50aa0d15c205e8d5d24414"
+    },
+    {
+      "path": "CORRECTIONS_STATUS.md",
+      "bytes": 2829,
+      "sha256": "3f7d970465ff96e66e8411748dbfd9e804c26931518f126c9618252adc63b2c3"
+    },
+    {
+      "path": "domain_shift_summary.csv",
+      "bytes": 1482,
+      "sha256": "467bf237083e0d2687868ebdbe4496e7b5ae2e4f87c8aeff64f60310bd190f70"
+    },
+    {
+      "path": "EVIDENCE_PATHS.json",
+      "bytes": 1270,
+      "sha256": "5c7bd00ecf19a1bef29906a93ac582edee9650ee09f9c7ee2384ad6c4156fe07"
+    },
+    {
+      "path": "H1_descriptive_statistics.csv",
+      "bytes": 799,
+      "sha256": "0851f588c21cee9ed058a7989e8ed2631846881fe7ed1821dba8eb764887aa00"
+    },
+    {
+      "path": "H1_mAP0.50.png",
+      "bytes": 88333,
+      "sha256": "7b01f6a8d48498d3f8d575bec56661e8794cc500ba18bc6b46e494f349d2946b"
+    },
+    {
+      "path": "H1_mAP0.50_0.95.png",
+      "bytes": 90159,
+      "sha256": "808681190d02440190d683db2c8c8b41f5ff878fef3ee6406e2504b7a1095a09"
+    },
+    {
+      "path": "H1_statistics_summary.json",
+      "bytes": 18504,
+      "sha256": "51f8d2f6f1aba2ee91c08d65088a388aa970dd68f104658996c591de0567645c"
+    },
+    {
+      "path": "H2_degradation_summary.csv",
+      "bytes": 4247,
+      "sha256": "0199da80040a7743700d54bed0051ce0a7d7bc9d808804c1193522bb0f78a2a8"
+    },
+    {
+      "path": "h2_inferential_results.csv",
+      "bytes": 1167,
+      "sha256": "72277102ee428104ec35af29ce8a9cadf1a50e84cd5731f2fa10f3f031c1eda6"
+    },
+    {
+      "path": "H2_publication_recheck_manifest.json",
+      "bytes": 852,
+      "sha256": "eec9886593b02b534023488ab1d308f7ff231dcdeb4ac0305c8f76180cac0d7f"
+    },
+    {
+      "path": "H2_run_configuration.json",
+      "bytes": 1477,
+      "sha256": "19738257e5fa8d709b1232b01c2e5d782a5bf7bb928e507f56f9d36d14f7ea65"
+    },
+    {
+      "path": "h2_wilcoxon_holm_verified_v2.py",
+      "bytes": 7249,
+      "sha256": "f9461dbcfcee9b82d4f84ff872514e4433c491b77edd0e2ef17f32d24a7e76c9"
+    },
+    {
+      "path": "H3_run_configuration.json",
+      "bytes": 2799,
+      "sha256": "5bbb612facacdd77bdef457a53d8dff9ebc568f0fb647d3802680814eee28595"
+    },
+    {
+      "path": "H3_run_configuration_corrected.json",
+      "bytes": 2967,
+      "sha256": "3800cbb67e552dd361393a4e7f8b99c2594dab07287654ce84256b70ffb9c5b4"
+    },
+    {
+      "path": "H3_target_manifest.csv",
+      "bytes": 900538,
+      "sha256": "417dcf0aa4243a708a4baeed0be0805fa3a3fcc92598bdabe76512c5caceb01f"
+    },
+    {
+      "path": "per_image_degradation.csv",
+      "bytes": 6216267,
+      "sha256": "15d46b585c72913e53275e1314552359f664ef2c96a979356b572eadc3ad278b"
+    },
+    {
+      "path": "per_image_domain_shift.csv",
+      "bytes": 1169279,
+      "sha256": "82e6eb54d8366fde7702970c7918f99a90bb82a3c403064370b740ea015be5b4"
+    },
+    {
+      "path": "per_image_metrics.csv",
+      "bytes": 1196450,
+      "sha256": "a6aaa37e286d38f44fac493e7ba103c82bf82228e0cc0a58043204c31d507107"
+    },
+    {
+      "path": "README.md",
+      "bytes": 11845,
+      "sha256": "b8282cc7c6fb6964ea29ec8c833fa438d9f06379ee181b72a852fb3b4a691935"
+    },
+    {
+      "path": "rtdetr_train.py",
+      "bytes": 25992,
+      "sha256": "381c63c6a65e9333482a8e3a8ff95aad3eb1b62f7d186a297118b71ea5b45520"
+    },
+    {
+      "path": "rtmdet_train.py",
+      "bytes": 10801,
+      "sha256": "6e371bdc6f4ee30f8910a2b8e4c16c6bf3ecff9d134519e0946a3fed6d5b1b56"
+    },
+    {
+      "path": "run_manifest.json",
+      "bytes": 852,
+      "sha256": "2f06891754718f0bec2f44f5b23430f306b5ba3fcc9904d86254a43039112334"
+    },
+    {
+      "path": "run_rtdetr.py",
+      "bytes": 930,
+      "sha256": "1a439c68cefddb11cec3ffb655fbd80474f773a9cb50c68972aefff180087890"
+    },
+    {
+      "path": "test.py",
+      "bytes": 16144,
+      "sha256": "194db1fe38cb7bd55f03cceff291d718db5fa7c5acb8e10d9665ebf2cd13c96a"
+    },
+    {
+      "path": "train_rtdetr_l_6gb.py",
+      "bytes": 33415,
+      "sha256": "0db059620e55d03a9238741ce89f2cd69660f78990e63793ad298ee2645e4b6a"
+    },
+    {
+      "path": "train_rtmdet_tiny.py",
+      "bytes": 40005,
+      "sha256": "23026ac24baf3328f71513920cf1465acf703406b793e7319f397ae4b6f6f046"
+    },
+    {
+      "path": "train_yolov8.py",
+      "bytes": 531,
+      "sha256": "bdb90fcf6257bdeebfb52820fa871140853d7697cf8819547fa28a98c49d841b"
+    },
+    {
+      "path": "unified_trainer.py",
+      "bytes": 13742,
+      "sha256": "6846b8c7c3a8fde18a29ebfe8fc6304bb581006f75183cbe75b704724daf38f4"
+    },
+    {
+      "path": "VALIDATION.json",
+      "bytes": 3144,
+      "sha256": "f598e86a62c52ff78fa9db942b342fad8a85e9d4197991ca5be31ce22c14a003"
+    },
+    {
+      "path": "yolov8_train.py",
+      "bytes": 267,
+      "sha256": "d91790d71c16ed2e46b72efa87cc673d90ad83b7550058fbdbfaa26fe1a83e60"
+    }
+  ],
+  "unavailable": [
+    {
+      "item": "weights for H1–H4",
+      "status": "not supplied",
+      "effect": "epoch, binary hash and checkpoint selection cannot be independently verified"
+    },
+    {
+      "item": "complete labels/test and annotation version",
+      "status": "not supplied",
+      "effect": "per-class GT counts, including class 9, cannot be independently verified"
+    },
+    {
+      "item": "complete H3 target images and labels",
+      "status": "not supplied",
+      "effect": "synthetic dataset cannot be fully regenerated/checked against stored data"
+    },
+    {
+      "item": "per_image_adaptation.csv and H4 evaluation configuration",
+      "status": "not supplied",
+      "effect": "paired H4 statistics and raw row count not independently reproduced"
+    },
+    {
+      "item": "original training environment export and full baseline validation logs",
+      "status": "not supplied",
+      "effect": "training versions and best-weight selection not independently verified"
+    }
+  ],
+  "validation": "VALIDATION.json",
+  "publication_commit": "Use the GitHub commit containing this manifest; no self-referential commit hash is embedded.",
+  "excluded_by_owner": [
+    "Word thesis (.docx)",
+    "PowerPoint defense (.pptx)"
+  ]
+}

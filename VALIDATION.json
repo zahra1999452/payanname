@@ -1,0 +1,83 @@
+{
+  "compile_count": 37,
+  "compile_files": [
+    "check_rtdetr.py",
+    "config.py",
+    "h2_wilcoxon_holm_verified_v2.py",
+    "rtdetr_train.py",
+    "rtmdet_train.py",
+    "run_rtdetr.py",
+    "test.py",
+    "train_rtdetr_l_6gb.py",
+    "train_rtmdet_tiny.py",
+    "train_yolov8.py",
+    "unified_trainer.py",
+    "yolov8_train.py",
+    "__init__.py",
+    "hypothesis_tests/configs/config.py",
+    "hypothesis_tests/scripts/make_chapter4_tables.py",
+    "hypothesis_tests/scripts/select_h4_model.py",
+    "hypothesis_tests/scripts/common/audit_test_split.py",
+    "hypothesis_tests/scripts/common/io_utils.py",
+    "hypothesis_tests/scripts/H1/H1_controlled_baseline_map_cached.py",
+    "hypothesis_tests/scripts/H1/H1_rerun.py",
+    "hypothesis_tests/scripts/H1/run_h1_complete.py",
+    "hypothesis_tests/scripts/H1/run_h1_statistics.py",
+    "hypothesis_tests/scripts/H2/H2_robustness_cached.py",
+    "hypothesis_tests/scripts/H2/make_corruptions.py",
+    "hypothesis_tests/scripts/H2/run_h2_complete.py",
+    "hypothesis_tests/scripts/H2/run_h2_statistics.py",
+    "hypothesis_tests/scripts/H3/build_H3_target_dataset.py",
+    "hypothesis_tests/scripts/H3/check_target_domain.py",
+    "hypothesis_tests/scripts/H3/H3_domain_shift_complete.py",
+    "hypothesis_tests/scripts/H3/make_h3_domain_shift.py",
+    "hypothesis_tests/scripts/H3/run_h3_all_conditions.py",
+    "hypothesis_tests/scripts/H3/run_h3_complete.py",
+    "hypothesis_tests/scripts/H3/run_h3_statistics.py",
+    "hypothesis_tests/scripts/H4/config_h4.py",
+    "hypothesis_tests/scripts/H4/run_h4_complete.py",
+    "hypothesis_tests/scripts/H4/run_h4_end_to_end.py",
+    "hypothesis_tests/scripts/H4/run_h4_statistics.py"
+  ],
+  "blocked_legacy_constructors": [
+    "unified_trainer.py:rtdetr",
+    "unified_trainer.py:rtmdet",
+    "rtmdet_train.py:rtmdet"
+  ],
+  "h2_exact_six_rows_match": true,
+  "h2_primary_zero_counts": [
+    267,
+    351,
+    260
+  ],
+  "h2_output_sha256": "72277102ee428104ec35af29ce8a9cadf1a50e84cd5731f2fa10f3f031c1eda6",
+  "no_gpu_training_or_inference_performed": true,
+  "unavailable": [
+    {
+      "item": "weights for H1–H4",
+      "status": "not supplied",
+      "effect": "epoch, binary hash and checkpoint selection cannot be independently verified"
+    },
+    {
+      "item": "complete labels/test and annotation version",
+      "status": "not supplied",
+      "effect": "per-class GT counts, including class 9, cannot be independently verified"
+    },
+    {
+      "item": "complete H3 target images and labels",
+      "status": "not supplied",
+      "effect": "synthetic dataset cannot be fully regenerated/checked against stored data"
+    },
+    {
+      "item": "per_image_adaptation.csv and H4 evaluation configuration",
+      "status": "not supplied",
+      "effect": "paired H4 statistics and raw row count not independently reproduced"
+    },
+    {
+      "item": "original training environment export and full baseline validation logs",
+      "status": "not supplied",
+      "effect": "training versions and best-weight selection not independently verified"
+    }
+  ],
+  "base_commit": "4b9908084d575b6a9d33028db6cf257d772a246e"
+}
